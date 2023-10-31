@@ -1,0 +1,10 @@
+@import './assets/styles/vars';
+
+* {
+    box-sizing: border-box;
+    font-family: $font-primary;
+    font-size: $fs-body;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
