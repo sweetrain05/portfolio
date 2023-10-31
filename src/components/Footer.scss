@@ -1,0 +1,49 @@
+@import '~/src/assets/styles/colors';
+@import '~/src/assets/styles/vars';
+
+.footer {
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+        border-top: 1px solid $peach;
+    }
+
+    &__nav-list,
+    &__ext-link-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+
+        &__btn {
+            padding: 0.5rem 0;
+            margin: 1.25rem;
+
+            &:hover {
+                color: $bright-green;
+            }
+        }
+
+        &__btn-icons {
+            padding: 0.5rem 0;
+            margin: 1rem 1rem 1.5rem 1rem;
+
+            &__icon {
+                width: 25px;
+                height: 25px;
+
+                &:hover {
+                    color: $bright-green;
+                }
+            }
+        }
+    }
+}
