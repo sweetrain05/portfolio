@@ -1,49 +1,133 @@
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
-import { navList } from '../common/AppConstants';
+import { tabletWidth, navList } from '../common/AppConstants';
+import useWindowWidth from '../hooks/useWindowWidth';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+import { BsEmojiSmile } from 'react-icons/bs';
 import './Header.scss';
 
 const Header: React.FC = () => {
     const navigate = useNavigate();
+    const windowWidth = useWindowWidth();
+    const navOverlayRef = useRef(null);
+
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+    const handleNavClick = (page: string) => {
+        switch (page) {
+            case 'home':
+                navigate('/');
+                break;
+            case 'experiences':
+                navigate('/experiences');
+                break;
+            case 'skills':
+                navigate('/skills');
+                break;
+            case 'contact':
+                navigate('/contact');
+                break;
+            default:
+                break;
+        }
+        setIsMenuOpen(false);
+    };
+
+    useEffect(() => {
+        const isDescendant = (curr, node) => {
+            if (node === curr) return true;
+            if (!node || !node.childNodes || !node.childNodes.length)
+                return false;
+            return Array.from(node.childNodes).some((n) =>
+                isDescendant(curr, n)
+            );
+        };
+
+        const handleClickOutside = (e: MouseEvent) => {
+            if (
+                navOverlayRef.current &&
+                !isDescendant(e.target, navOverlayRef.current)
+            ) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => document.removeEventListener('click', handleClickOutside);
+    }, []);
 
     return (
         <div className='header'>
             <div className='header__container'>
-                <button
-                    onClick={(e) => {
-                        e.preventDefault();
-                        navigate('/');
-                    }}
-                >
-                    <img src={logo} alt='logo' />
+                <button onClick={() => handleNavClick('home')}>
+                    <img src={logo} alt='logo' className='header__logo' />
                 </button>
-                <nav>
-                    <ul className='header__nav-list'>
-                        {navList.map((li) => (
-                            <li key={li.name}>
-                                <button
-                                    className='header__nav-list__btn'
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        navigate(li.link);
-                                    }}
-                                >
-                                    {li.name.toUpperCase()}
-                                </button>
-                            </li>
-                        ))}
-                        <li>
+                <nav className='header__nav'>
+                    {windowWidth < tabletWidth && (
+                        <>
                             <button
-                                className='header__nav-list__btn-highlight'
+                                className='header__nav-btn'
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    navigate('/contact');
+                                    e.stopPropagation();
+                                    setIsMenuOpen((curr) => !curr);
                                 }}
                             >
-                                {`Let's talk`.toUpperCase()}
+                                <p className='header__nav-btn__text'>Menu</p>
+                                <MdKeyboardArrowDown
+                                    className={
+                                        isMenuOpen
+                                            ? 'header__nav-btn__arrow header__nav-btn__arrow--up'
+                                            : 'header__nav-btn__arrow'
+                                    }
+                                />
                             </button>
-                        </li>
-                    </ul>
+                            {isMenuOpen && (
+                                <ul
+                                    className='header__nav-overlay'
+                                    ref={navOverlayRef}
+                                >
+                                    {navList.map((li) => (
+                                        <li key={li}>
+                                            <button
+                                                className='header__nav-overlay__li'
+                                                onClick={() =>
+                                                    handleNavClick(li)
+                                                }
+                                            >
+                                                {li.toUpperCase()}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </>
+                    )}
+
+                    {windowWidth > tabletWidth && (
+                        <ul className='header__nav-list'>
+                            {navList.slice(0, -1).map((li) => (
+                                <li key={li}>
+                                    <button
+                                        className='header__nav-list__btn'
+                                        onClick={() => handleNavClick(li)}
+                                    >
+                                        {li.toUpperCase()}
+                                    </button>
+                                </li>
+                            ))}
+                            <li>
+                                <button
+                                    className='header__nav-list__btn-highlight'
+                                    onClick={() => handleNavClick('contact')}
+                                >
+                                    {`Let's talk`.toUpperCase()}
+                                </button>
+                            </li>
+                        </ul>
+                    )}
                 </nav>
             </div>
         </div>

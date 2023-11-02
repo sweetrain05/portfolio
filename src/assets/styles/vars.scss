@@ -4,8 +4,23 @@
 $font-primary: 'Poppins', sans-serif;
 
 // 👉 Font size
-$fs-h1: 2rem; // 32px
-$fs-h2: 1.5rem; // 24px
-$fs-h3: 1.25rem; // 20px
-$fs-h4: 1.125rem; // 18px
-$fs-body: 1rem; // 16px
+// Mobile: default
+$m-fs-h1: 1.75rem; // 28px
+$m-fs-h2: 1.25rem; // 20px
+$m-fs-h3: 1.125rem; // 18px
+$m-fs-h4: 1rem; // 16px
+$m-fs-body: 1rem; // 14px
+
+// Tablet
+$t-fs-h1: 1.75rem; // 28px
+$t-fs-h2: 1.25rem; // 20px
+$t-fs-h3: 1.125rem; // 18px
+$t-fs-h4: 1rem; // 16px
+$t-fs-body: 1rem; // 14px
+
+// Desktop
+$d-fs-h1: 2rem; // 32px
+$d-fs-h2: 1.5rem; // 24px
+$d-fs-h3: 1.25rem; // 20px
+$d-fs-h4: 1.125rem; // 18px
+$d-fs-body: 1rem; // 16px

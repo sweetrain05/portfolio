@@ -1,10 +1,10 @@
 import { BsLinkedin, BsGithub, BsFillEnvelopeFill } from 'react-icons/bs';
 
-export const navList = [
-    { name: 'home', link: '/' },
-    { name: 'experiences', link: '/experiences' },
-    { name: 'skills', link: '/skills' },
-];
+export const mobileWidth = 480;
+export const tabletWidth = 767;
+export const desktopWidth = 1024;
+
+export const navList = ['home', 'experiences', 'skills', 'contact'];
 
 export const extLinkList = [
     { icon: BsLinkedin, link: 'https://www.linkedin.com/in/danbi-choi/' },

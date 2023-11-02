@@ -1,0 +1,11 @@
+.page {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: #{'1fr min(1024px, calc(100% - 4rem)) 1fr'};
+    grid-template-rows: 200px auto;
+}
+
+.page > * {
+    grid-column: 2 / auto;
+    grid-row: 2 / auto;
+}

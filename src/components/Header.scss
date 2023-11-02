@@ -2,18 +2,120 @@
 @import '~/src/assets/styles/vars';
 
 .header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+    width: 100%;
     display: flex;
     justify-content: center;
+    background-color: rgba($white, 0.5);
 
     &__container {
-        width: 100%;
+        width: calc(100% - 2rem);
         max-width: 1024px;
-        height: 80px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid $peach;
+        padding: 1rem 0;
+        background-color: transparent;
+    }
+
+    &__logo {
+        width: 45px;
+        height: 45px;
+        transition: transform 0.5s ease-in-out;
+        background-color: transparent;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+
+    &__nav {
+        background-color: transparent;
+    }
+
+    &__nav-btn {
+        border-radius: 50px;
+        background-color: $light-gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        transition: 0.5s ease-in-out;
+        padding: 0.5rem 1rem 0.5rem 1.5rem;
+
+        &__text {
+            font-weight: 500;
+            color: $dark-gray;
+            font-size: $m-fs-body;
+            background-color: transparent;
+        }
+
+        &__arrow {
+            width: 22px;
+            height: 22px;
+            color: $bright-green;
+            transition: 0.5s ease-in-out;
+            background-color: transparent;
+        }
+
+        &:hover &__arrow {
+            @keyframes bounce {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(5px);
+                }
+            }
+            animation: bounce 0.5s ease infinite;
+        }
+
+        &__arrow--up {
+            @keyframes bounceAndRotate {
+                0%,
+                100% {
+                    transform: translateY(0) rotate(180deg);
+                }
+                50% {
+                    transform: translateY(3px) rotate(180deg);
+                }
+            }
+            animation: bounceAndRotate 0.5s ease infinite;
+        }
+    }
+
+    &__nav-overlay {
+        position: absolute;
+        top: 4.1rem;
+        right: 1rem;
+        background-color: $light-gray;
+        border-radius: 20px;
+        list-style: none;
+        padding: 0 1rem;
+
+        li {
+            background-color: transparent;
+        }
+
+        &__li {
+            width: 100%;
+            text-align: start;
+            padding: 0.5rem 0;
+            margin: 0.4rem 0;
+            color: $dark-gray;
+            font-weight: 500;
+
+            &:hover {
+                color: $bright-green;
+            }
+        }
     }
 
     &__nav-list {
@@ -22,12 +124,17 @@
         justify-content: space-between;
         align-items: center;
         list-style: none;
+        background-color: transparent;
+
+        li {
+            background-color: transparent;
+        }
 
         &__btn {
             position: relative;
             display: inline-block;
             padding: 0.5rem 0;
-            margin: 1.25rem;
+            margin: 0 1.25rem;
             text-align: center;
             transition: color 0.3s;
             overflow: hidden;
@@ -67,6 +174,19 @@
                 #ff6565 -3.48%,
                 #ffb2b2 87.94%
             );
+
+            &:hover {
+                @keyframes shake {
+                    0%,
+                    100% {
+                        transform: translateX(0);
+                    }
+                    50% {
+                        transform: translateX(3px);
+                    }
+                }
+                animation: shake 0.5s ease infinite;
+            }
         }
     }
 }

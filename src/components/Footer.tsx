@@ -15,34 +15,23 @@ const Footer: React.FC = () => {
                         navigate('/');
                     }}
                 >
-                    <img src={logo} alt='logo' />
+                    <img src={logo} alt='logo' className='footer__logo' />
                 </button>
                 <nav>
                     <ul className='footer__nav-list'>
                         {navList.map((li) => (
-                            <li key={li.name}>
+                            <li key={li}>
                                 <button
                                     className='footer__nav-list__btn'
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        navigate(li.link);
+                                        navigate(li);
                                     }}
                                 >
-                                    {li.name.toUpperCase()}
+                                    {li.toUpperCase()}
                                 </button>
                             </li>
                         ))}
-                        <li>
-                            <button
-                                className='footer__nav-list__btn'
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    navigate('/contact');
-                                }}
-                            >
-                                {'Contact'.toUpperCase()}
-                            </button>
-                        </li>
                     </ul>
                 </nav>
                 <ul className='footer__ext-link-list'>
