@@ -1,0 +1,101 @@
+@import '~/src/assets/styles/colors';
+@import '~/src/assets/styles/vars';
+
+.home__highlight__card {
+    width: 100%;
+    padding: 2.188rem 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.5;
+    background: linear-gradient(
+        180deg,
+        #ededed 0%,
+        rgba(237, 237, 237, 0) 100%
+    );
+
+    &:hover {
+        background: linear-gradient(
+            180deg,
+            rgba(35, 201, 141, 0.11) 0%,
+            rgba(35, 201, 141, 0) 100%
+        );
+    }
+
+    &__color-circle {
+        width: 50px;
+        height: 50px;
+        background-color: $white;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+
+        &__inner {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            background: linear-gradient(120deg, $pink 30%, $peach 100%);
+            border-radius: 50%;
+        }
+    }
+
+    &__title {
+        font-size: $m-fs-h3;
+        font-weight: 600;
+        margin: 1rem 0 0.438rem 0;
+
+        &__link {
+            text-decoration: none;
+        }
+    }
+
+    &__description {
+        margin: 1.125rem 0 3.3rem 0;
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+
+        &__container {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.2rem;
+            max-width: 220px;
+        }
+
+        &__icon-box {
+            width: 54px;
+            height: 54px;
+            background-color: $gray;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+
+            &:hover {
+                background-color: $white;
+            }
+        }
+
+        &__icon-box:hover &__icon {
+            transform: scale(1.1);
+            color: $pink;
+            background-color: $white;
+        }
+
+        &__icon {
+            width: 25px;
+            height: 25px;
+            background-color: $gray;
+            padding-bottom: none;
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+}
