@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/images/logo.svg';
-import { tabletWidth, navList } from '../common/AppConstants';
-import useWindowWidth from '../hooks/useWindowWidth';
 import { MdKeyboardArrowDown } from 'react-icons/md';
-import { BsEmojiSmile } from 'react-icons/bs';
+import logo from '../../assets/images/logo.svg';
+import { tabletWidth, navList } from '../AppConstants';
+import useWindowWidth from '../../hooks/useWindowWidth';
 import './Header.scss';
 
 const Header: React.FC = () => {
@@ -68,7 +67,7 @@ const Header: React.FC = () => {
                     {windowWidth < tabletWidth && (
                         <>
                             <button
-                                className='header__nav-btn'
+                                className='header__nav-btn btn'
                                 onClick={(e) => {
                                     e.preventDefault();
                                     e.stopPropagation();
@@ -120,7 +119,7 @@ const Header: React.FC = () => {
                             ))}
                             <li>
                                 <button
-                                    className='header__nav-list__btn-highlight'
+                                    className='header__nav-list__btn-highlight btn'
                                     onClick={() => handleNavClick('contact')}
                                 >
                                     {`Let's talk`.toUpperCase()}

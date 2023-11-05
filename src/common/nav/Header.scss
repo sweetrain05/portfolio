@@ -39,15 +39,10 @@
     }
 
     &__nav-btn {
-        border-radius: 50px;
-        background-color: $light-gray;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        background-color: $gray;
         gap: 0.5rem;
-        transition: 0.5s ease-in-out;
         padding: 0.5rem 1rem 0.5rem 1.5rem;
+        transition: 0.5s ease-in-out;
 
         &__text {
             font-weight: 500;
@@ -95,7 +90,7 @@
         position: absolute;
         top: 4.1rem;
         right: 1rem;
-        background-color: $light-gray;
+        background-color: $gray;
         border-radius: 20px;
         list-style: none;
         padding: 0 1rem;
@@ -163,17 +158,10 @@
         }
 
         &__btn-highlight {
-            padding: 0.5rem 1.563rem;
             margin-left: 1.25rem;
-            border-radius: 50px;
             font-weight: 500;
             color: $white;
-            background: linear-gradient(
-                100deg,
-                #ff6565 -3.49%,
-                #ff6565 -3.48%,
-                #ffb2b2 87.94%
-            );
+            background: $pink-gradation;
 
             &:hover {
                 @keyframes shake {

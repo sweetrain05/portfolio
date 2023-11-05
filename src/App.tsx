@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
+import Header from './common/nav/Header';
+import Footer from './common/nav/Footer';
+import Home from './components/pages/Home';
+import Experiences from './components/pages/Experiences';
 import './App.scss';
 
 const App: React.FC = () => {
@@ -12,6 +13,7 @@ const App: React.FC = () => {
             <main className='page'>
                 <Routes>
                     <Route path='/' element={<Home />} />
+                    <Route path='/experiences' element={<Experiences />} />
                 </Routes>
             </main>
             <Footer />

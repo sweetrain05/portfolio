@@ -1,11 +1,28 @@
 import { Link } from 'react-router-dom';
 import './HighlightCard.scss';
 
-const HighlightCard = ({ data }) => {
+type OwnProps = {
+    data: highlightDataType;
+};
+
+type highlightDataType = {
+    title: string;
+    subtitle: string;
+    description: string;
+    link: linkDataType[];
+};
+
+export type linkDataType = {
+    icon: any;
+    to: string;
+    linkTitle: string;
+};
+
+const HighlightCard: React.FC<OwnProps> = ({ data }) => {
     const { title, subtitle, description, link } = data;
 
     return (
-        <div className='home__highlight__card'>
+        <article className='home__highlight__card'>
             <Link
                 to={link[0].to}
                 className='home__highlight__card__title__link'
@@ -43,7 +60,7 @@ const HighlightCard = ({ data }) => {
                     ))}
                 </ul>
             </div>
-        </div>
+        </article>
     );
 };
 

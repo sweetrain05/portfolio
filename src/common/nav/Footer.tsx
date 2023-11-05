@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/images/logo.svg';
-import { navList, extLinkList } from '../common/AppConstants';
+import logo from '../../assets/images/logo.svg';
+import { navList, extLinkList } from '../AppConstants';
 import './Footer.scss';
 
 const Footer: React.FC = () => {
