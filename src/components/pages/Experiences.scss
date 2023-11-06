@@ -1,0 +1,28 @@
+@import '~/src/assets/styles/colors';
+@import '~/src/assets/styles/vars';
+
+.experiences {
+    &__title {
+        margin-bottom: 2.5rem;
+    }
+
+    &__resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 1rem;
+
+        &__text {
+            font-size: $m-fs-h4;
+        }
+
+        &__btn {
+            font-size: $m-fs-h4;
+            color: $pink;
+            font-weight: 700;
+            background-color: $dark-green;
+            gap: 0.5rem;
+        }
+    }
+}
