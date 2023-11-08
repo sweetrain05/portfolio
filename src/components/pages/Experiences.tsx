@@ -1,6 +1,9 @@
 import { MdFileDownload } from 'react-icons/md';
 import ExperienceCard from '../cards/ExperienceCard';
-import { experiencesCardData } from '../../common/AppConstants';
+import {
+    experiencesCardData,
+    projectsCardData,
+} from '../../common/AppConstants';
 import './Experiences.scss';
 
 const Experiences: React.FC = () => {
@@ -16,12 +19,21 @@ const Experiences: React.FC = () => {
                     DOWNLOAD
                 </button>
             </section>
+
             <section className='experiences__exp'>
                 {experiencesCardData.map((exp) => (
                     <ExperienceCard data={exp} key={exp.title} />
                 ))}
             </section>
-            <section className='experiences__projects'></section>
+
+            <h1 className='experiences__projects__title section-title'>
+                Projects
+            </h1>
+            <section className='experiences__projects'>
+                {projectsCardData.map((pro) => (
+                    <ExperienceCard data={pro} key={pro.title} />
+                ))}
+            </section>
         </section>
     );
 };
