@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { BsFillBoxFill, BsFillCheckSquareFill } from 'react-icons/bs';
 import { linkDataType } from './HighlightCard';
 import './ExperienceCard.scss';
 
@@ -7,31 +8,33 @@ type OwnProps = {
 };
 
 type experienceDataType = {
-    jobTitle: string;
+    jobTitle?: string;
     title: string;
     subtitle: string;
     description?: string;
     link?: linkDataType[];
-    frontend?: string;
-    backend?: string;
+    frontend?: string[];
+    backend?: string[];
     explanation: string[];
 };
 
 const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
     const {
-        jobTitle,
+        jobTitle = '',
         title,
         subtitle,
         description = '',
         link = [],
-        frontend = '',
-        backend = '',
+        frontend = [],
+        backend = [],
         explanation,
     } = data;
 
     return (
         <article className='experience-card'>
-            <h1 className='experience-card__jobTitle'>{jobTitle}</h1>
+            {jobTitle && (
+                <h1 className='experience-card__jobTitle'>{jobTitle}</h1>
+            )}
             <div className='experience-card__top-container'>
                 <div className='experience-card__top-container__img-box'>
                     <img
@@ -49,45 +52,58 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                 <p className='experience-card__top-container__description'>
                     {description}
                 </p>
-                <ul className='experience-card__top-container__link-box'>
-                    {link.map((li) => (
-                        <Link
-                            to={li.to}
-                            className='experience-card__top-container__link'
-                        >
-                            <li key={li.icon}>
-                                <button>
-                                    <li.icon className='experience-card__top-container__link__icon' />
-                                </button>
-                            </li>
-                        </Link>
-                    ))}
-                </ul>
+                {link.length > 0 && (
+                    <ul className='experience-card__top-container__link-box'>
+                        {link.map((li) => (
+                            <Link
+                                to={li.to}
+                                className='experience-card__top-container__link'
+                            >
+                                <li key={li.icon}>
+                                    <button>
+                                        <li.icon className='experience-card__top-container__link__icon' />
+                                    </button>
+                                </li>
+                            </Link>
+                        ))}
+                    </ul>
+                )}
             </div>
             <div className='experience-card__bottom-container'>
-                {frontend && (
+                {frontend.length > 0 && (
                     <div className='experience-card__bottom-container__skill'>
-                        <div className='experience-card__bottom-container__skill__title title-bright-green'>
+                        <div className='experience-card__bottom-container__skill__title'>
+                            <BsFillBoxFill className='experience-card__bottom-container__skill__title__icon' />
                             Front-end
                         </div>
-                        <p className='experience-card__bottom-container__skill__list'>
-                            {frontend}
-                        </p>
+                        <ul className='experience-card__bottom-container__skill__list'>
+                            {frontend.map((li) => (
+                                <li className='experience-card__bottom-container__skill__li'>
+                                    {li}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 )}
-                {backend && (
+                {backend.length > 0 && (
                     <div className='experience-card__bottom-container__skill'>
-                        <div className='experience-card__bottom-container__skill__title title-dark-green'>
+                        <div className='experience-card__bottom-container__skill__title'>
+                            <BsFillBoxFill className='experience-card__bottom-container__skill__title__icon' />
                             Back-end
                         </div>
-                        <p className='experience-card__bottom-container__skill__list'>
-                            {backend}
-                        </p>
+                        <ul className='experience-card__bottom-container__skill__list'>
+                            {backend.map((li) => (
+                                <li className='experience-card__bottom-container__skill__li'>
+                                    {li}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 )}
 
                 <div className='experience-card__bottom-container__skill'>
-                    <div className='experience-card__bottom-container__skill__title title-gray'>
+                    <div className='experience-card__bottom-container__skill__title'>
+                        <BsFillBoxFill className='experience-card__bottom-container__skill__title__icon' />
                         What I did
                     </div>
                     <ul className='experience-card__bottom-container__explanation'>

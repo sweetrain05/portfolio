@@ -97,7 +97,7 @@ export const experiencesCardData = [
         title: 'ECommerce Website',
         subtitle: 'YoungLeeHan Korean, U.S.',
         description:
-            'Developed a dynamic e-commerce website featuring 35+page routes. The website offers K-culture blog and a platform for selling learning materials. It also pro vides an admin panel with multiple privilege levels, enabling efficient site administration.',
+            'Developed a dynamic e-commerce website featuring 35+page routes. The website offers K-culture blog and a platform for selling learning materials. It also provides an admin panel with multiple privilege levels, enabling efficient site administration.',
         link: [
             {
                 icon: BsGithub,
@@ -115,9 +115,20 @@ export const experiencesCardData = [
                 linkTitle: 'demo',
             },
         ],
-        frontend:
-            'React, Hooks, Context, HTML5, SASS, JavaScript ES6, AJAX, REST API, Bootstrap, Ant Design, Figma',
-        backend: 'Node.js, Express.js, MongoDB, REST API, Postman',
+        frontend: [
+            'React',
+            'Hooks',
+            'Context',
+            'HTML5',
+            'SASS',
+            'JavaScript ES6',
+            'AJAX',
+            'REST API',
+            'Bootstrap',
+            'Ant Design',
+            'Figma',
+        ],
+        backend: ['Node.js', 'Express.js', 'MongoDB', 'REST API', 'Postman'],
         explanation: [
             'Architected and developed 30+ reusable react components collaborating with 4 other software engineers.',
             'Established seamless integration between the front-end and back-end utilizing REST APIs.',
@@ -148,7 +159,15 @@ export const experiencesCardData = [
                 linkTitle: 'demo',
             },
         ],
-        frontend: 'React, JavaScript ES6, HTML5, SASS, AJAX, REST API, Figma',
+        frontend: [
+            'React',
+            'JavaScript ES6',
+            'HTML5',
+            'SASS',
+            'AJAX',
+            'REST API',
+            'Figma',
+        ],
         explanation: [
             'Developed through end-to-end lifecycle, from Figma design to deployment.',
             'Implemented HTTP requests using RapidAPI to retrieve user articles from their Medium blog.',
@@ -158,10 +177,42 @@ export const experiencesCardData = [
     {
         jobTitle: 'Product Manager in Marketing',
         title: 'Project Management & Wireframing',
-        subtitle: 'LG Hausys, Ltd., Seoul, South Korea 2014 - 2018',
+        subtitle: 'LG Hausys, Ltd., Seoul, South Korea | 2014 - 2018',
         explanation: [
             'Demonstrated strong project management skills by setting and executing specific bi-weekly action plans and facilitating smooth collaborations.',
             'Created wireframes for various marketing materials, such as product preview websites, sample books, brochures, and product application guides.',
+        ],
+    },
+];
+
+export const projectsCardData = [
+    {
+        title: 'Web App.',
+        subtitle: 'Weather and News by Zip Code',
+        description:
+            'Built a site enabling users to search for local weather and related news articles by entering their zip code.',
+        link: [
+            {
+                icon: BsGithub,
+                to: 'https://github.com/sweetrain05/zipcode-search',
+                linkTitle: 'github',
+            },
+            {
+                icon: BsBoxArrowUpRight,
+                to: 'https://zipcode-search-one.vercel.app/',
+                linkTitle: 'demo',
+            },
+        ],
+        frontend: [
+            'React',
+            'JavaScript ES6',
+            'HTML5',
+            'CSS3',
+            'AJAX',
+            'REST API',
+        ],
+        explanation: [
+            'Incorporated chaining HTTP requests to four different public APIs(Rapid APIs, NewsCatcher), utilizing user-entered zip code to extract location details, which was chained to fetch real-time information on weather, time of the day, and local news.',
         ],
     },
 ];
