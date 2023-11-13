@@ -5,6 +5,7 @@ import {
     BsFileEarmarkTextFill,
     BsBoxArrowUpRight,
     BsPalette2,
+    BsGeoAltFill,
 } from 'react-icons/bs';
 
 export const mobileWidth = 480;
@@ -215,6 +216,21 @@ export const projectsCardData = [
             'Incorporated chaining HTTP requests to four different public APIs(Rapid APIs, NewsCatcher), utilizing user-entered zip code to extract location details, which was chained to fetch real-time information on weather, time of the day, and local news.',
         ],
     },
+];
+
+export const contactLinks = [
+    {
+        icon: BsLinkedin,
+        title: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/danbi-choi/',
+    },
+    { icon: BsGithub, title: 'Github', link: 'https://github.com/sweetrain05' },
+    {
+        icon: BsFillEnvelopeFill,
+        title: 'sweetrain05@hotmail.com',
+        link: 'mailto:sweetrain05@hotmail.com',
+    },
+    { icon: BsGeoAltFill, title: 'San Francisco Bay Area' },
 ];
 
 export {};
