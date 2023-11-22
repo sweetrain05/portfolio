@@ -11,3 +11,7 @@ $black: #000000;
 
 $pink-gradation: linear-gradient(100deg, #ff6565 -3.49%, $pink 87.94%);
 $green-gradation: linear-gradient(180deg, $bright-green 0%, $dark-green 100%);
+
+$error: $pink;
+$disabled: $text-gray;
+$disabled-bg: $gray;

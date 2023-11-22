@@ -1,0 +1,81 @@
+@import '~/src/assets/styles/colors';
+@import '~/src/assets/styles/vars';
+
+.text-input {
+    width: 100%;
+    position: relative;
+
+    &--include-error {
+        padding-bottom: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        padding-bottom: 0.313rem;
+        color: $bright-green;
+
+        h3 {
+            font-weight: 400;
+        }
+    }
+
+    &__field {
+        width: 100%;
+        border-radius: 3px;
+        background-color: $white;
+        outline: none;
+
+        color: $dark-green;
+        border: 1px solid $dark-gray;
+        font-size: 1rem;
+        padding: 0.688rem 0.938rem;
+
+        &:focus {
+            border: 1px solid $bright-green;
+            caret-color: $bright-green;
+            background-color: rgba($peach, 0.3);
+
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+
+        &--disabled {
+            color: $disabled;
+            background-color: $disabled-bg;
+            border: 1px solid $dark-gray;
+
+            &::placeholder {
+                color: $disabled;
+            }
+        }
+
+        &--error {
+            border: 1px solid $error;
+            color: $error;
+
+            &::placeholder {
+                color: $error;
+            }
+        }
+
+        &--no-icon {
+            padding-left: 0.938em;
+        }
+    }
+
+    &__error-text {
+        position: absolute;
+        bottom: 0.1rem;
+        color: $error;
+        z-index: 999;
+        line-height: normal;
+        margin-left: 1rem;
+    }
+}

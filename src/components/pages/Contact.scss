@@ -39,12 +39,33 @@
             }
 
             &__description {
-                font-size: 1.125rem;
+                font-size: 1rem;
                 text-decoration: underline;
             }
 
             &:hover {
                 color: $bright-green;
+            }
+        }
+    }
+
+    &__form {
+        width: 100%;
+
+        &__subtitle {
+            margin: 2.625rem 0 2.063rem 0;
+        }
+
+        &__input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.438rem;
+
+            &__btn {
+                max-width: 100px;
+                font-weight: 500;
+                color: $white;
+                background: $pink-gradation;
             }
         }
     }
