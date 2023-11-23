@@ -58,7 +58,10 @@ const TextInput: React.FC<TextInputProps> = ({
         () =>
             classNames(
                 'text-input__field',
-
+                {
+                    'text-input__field--textarea':
+                        type === TextInputType.TEXTAREA,
+                },
                 { 'text-input__field--error': errorText },
                 {
                     'text-input__field--disabled': disabled,
@@ -66,7 +69,7 @@ const TextInput: React.FC<TextInputProps> = ({
 
                 { 'text-input__field--no-icon': !Icon }
             ),
-        [errorText, disabled, Icon]
+        [errorText, disabled, Icon, type]
     );
 
     return (

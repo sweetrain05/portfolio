@@ -46,6 +46,10 @@
             }
         }
 
+        &--textarea {
+            min-height: 150px;
+        }
+
         &--disabled {
             color: $disabled;
             background-color: $disabled-bg;
