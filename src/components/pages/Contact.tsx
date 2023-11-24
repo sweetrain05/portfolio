@@ -4,15 +4,30 @@ import {
     BsPencilFill,
     BsPersonFill,
 } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import { ValidationError, useForm } from '@formspree/react';
 import { contactLinks } from '../../common/AppConstants';
 import TextInput, { TextInputType } from '../../common/TextInput';
 import './Contact.scss';
 
 const Contact: React.FC = () => {
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        console.log('submit');
-    };
+    const [state, handleSubmit] = useForm('mdorkoqr');
+    if (state.succeeded) {
+        return (
+            <div className='contact__form__input-container__after-form-submission'>
+                <p>
+                    Thank you for your interest! <br />I will get back to you
+                    shortly.
+                </p>
+                <Link to={'/'}>
+                    <button className='contact__form__input-container__after-form-submission__btn btn'>
+                        Go Home ⇀
+                    </button>
+                </Link>
+            </div>
+        );
+    }
+
     return (
         <>
             <section className='contact'>
@@ -49,7 +64,7 @@ const Contact: React.FC = () => {
                         Want to chat about my works?
                     </p>
                     <form
-                        onSubmit={handleFormSubmit}
+                        onSubmit={handleSubmit}
                         className='contact__form__input-container'
                     >
                         <TextInput
@@ -57,27 +72,50 @@ const Contact: React.FC = () => {
                             label='Full Name'
                             icon={BsPersonFill}
                             placeholder='Your name'
+                            required
+                        />
+                        <ValidationError
+                            field='Full Name'
+                            prefix='Full Name'
+                            errors={state.errors}
                         />
                         <TextInput
                             type={TextInputType.EMAIL}
                             label='Email'
                             icon={BsEnvelopeFill}
                             placeholder='Your email'
+                            required
+                        />
+                        <ValidationError
+                            field='Email'
+                            prefix='Email'
+                            errors={state.errors}
                         />
                         <TextInput
                             type={TextInputType.TEXT}
                             label='Subject'
                             icon={BsPencilFill}
                             placeholder='What is this about?'
+                            required
+                        />
+                        <ValidationError
+                            field='Subject'
+                            prefix='Subject'
+                            errors={state.errors}
                         />
                         <TextInput
                             type={TextInputType.TEXTAREA}
                             label='Message'
                             icon={BsFillChatLeftTextFill}
                             placeholder='Your message here...'
+                            required
                         />
-                        <button className='contact__form__input-container__btn btn'>
-                            Send
+                        <button
+                            type='submit'
+                            disabled={state.submitting}
+                            className='contact__form__input-container__btn btn'
+                        >
+                            {state.submitting ? 'Sending...' : 'Send'}
                         </button>
                     </form>
                 </div>

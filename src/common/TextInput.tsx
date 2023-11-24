@@ -90,6 +90,7 @@ const TextInput: React.FC<TextInputProps> = ({
             ) : (
                 <input
                     id={label}
+                    name={label}
                     className={inputFieldClasses}
                     type={type}
                     disabled={disabled}
