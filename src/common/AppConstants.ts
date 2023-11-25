@@ -7,6 +7,17 @@ import {
     BsPalette2,
     BsGeoAltFill,
 } from 'react-icons/bs';
+import reactImg from '../assets/images/skills/react.svg';
+import reduxImg from '../assets/images/skills/redux.svg';
+import jsImg from '../assets/images/skills/javascript.svg';
+import tsImg from '../assets/images/skills/typescript.svg';
+import scssImg from '../assets/images/skills/scss.svg';
+import cssImg from '../assets/images/skills/css3.svg';
+import htmlImg from '../assets/images/skills/html5.svg';
+import bootstrapImg from '../assets/images/skills/bootstrap.svg';
+import antDesignImg from '../assets/images/skills/antDesign.svg';
+import figmaImg from '../assets/images/skills/figma.svg';
+import eslintImg from '../assets/images/skills/eslint.svg';
 
 export const mobileWidth = 480;
 export const tabletWidth = 767;
@@ -231,6 +242,25 @@ export const contactLinks = [
         link: 'mailto:sweetrain05@hotmail.com',
     },
     { icon: BsGeoAltFill, title: 'San Francisco Bay Area' },
+];
+
+export const skillList = [
+    {
+        title: 'Front-end Technologies',
+        list: [
+            { name: 'React', image: reactImg },
+            { name: 'Redux', image: reduxImg },
+            { name: 'JavaScript', image: jsImg },
+            { name: 'TypeScript', image: tsImg },
+            { name: 'SCSS', image: scssImg },
+            { name: 'CSS3', image: cssImg },
+            { name: 'HTML5', image: htmlImg },
+            { name: 'Bootstrap', image: bootstrapImg },
+            { name: 'Ant Design', image: antDesignImg },
+            { name: 'Figma', image: figmaImg },
+            { name: 'Eslint', image: eslintImg },
+        ],
+    },
 ];
 
 export {};
