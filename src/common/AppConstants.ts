@@ -18,6 +18,19 @@ import bootstrapImg from '../assets/images/skills/bootstrap.svg';
 import antDesignImg from '../assets/images/skills/antDesign.svg';
 import figmaImg from '../assets/images/skills/figma.svg';
 import eslintImg from '../assets/images/skills/eslint.svg';
+import nodeImg from '../assets/images/skills/node.svg';
+import expressImg from '../assets/images/skills/express.svg';
+import mongodbImg from '../assets/images/skills/mongodb.svg';
+import mysqlImg from '../assets/images/skills/mysql.svg';
+import postmanImg from '../assets/images/skills/postman.svg';
+import restapiImg from '../assets/images/skills/restapi.svg';
+import jiraImg from '../assets/images/skills/jira.svg';
+import confluenceImg from '../assets/images/skills/confluence.svg';
+import githubImg from '../assets/images/skills/github.svg';
+import gitImg from '../assets/images/skills/git.svg';
+import npmImg from '../assets/images/skills/npm.svg';
+import vercelImg from '../assets/images/skills/vercel.svg';
+import vscodeImg from '../assets/images/skills/vscode.svg';
 
 export const mobileWidth = 480;
 export const tabletWidth = 767;
@@ -259,6 +272,39 @@ export const skillList = [
             { name: 'Ant Design', image: antDesignImg },
             { name: 'Figma', image: figmaImg },
             { name: 'Eslint', image: eslintImg },
+        ],
+    },
+    {
+        title: 'Back-end Technologies',
+        list: [
+            { name: 'NodeJS', image: nodeImg },
+            { name: 'ExpressJS', image: expressImg },
+            { name: 'MongoDB', image: mongodbImg },
+            { name: 'MySQL', image: mysqlImg },
+            { name: 'Postman', image: postmanImg },
+            { name: 'REST API', image: restapiImg },
+        ],
+    },
+    {
+        title: 'Other Tools',
+        list: [
+            { name: 'Jira', image: jiraImg },
+            { name: 'Confluence', image: confluenceImg },
+            { name: 'Github', image: githubImg },
+            { name: 'Git', image: gitImg },
+            { name: 'npm', image: npmImg },
+            { name: 'Vercel', image: vercelImg },
+            { name: 'VSCode', image: vscodeImg },
+        ],
+    },
+    {
+        title: 'Specialties',
+        list: [
+            { name: 'Responsive Design' },
+            { name: 'Design-thinking' },
+            { name: 'Pixel-perfect design' },
+            { name: 'Agile/Scrum' },
+            { name: 'Project Management' },
         ],
     },
 ];
