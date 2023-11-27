@@ -2,12 +2,58 @@
 @import '~/src/assets/styles/vars';
 
 .skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 3rem;
 
-    &__title {
-        width: 100%;
+    &__subtitle {
+        margin: 2.625rem 0 1.438rem 0;
+        font-size: $m-fs-h2;
+    }
+
+    &__skills-container {
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 2.3rem;
+        text-align: center;
+
+        &__img-box {
+            width: 113px;
+            height: 113px;
+            border-radius: 5px;
+            background-color: $light-gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease-in;
+            cursor: pointer;
+
+            &__img {
+                width: 60px;
+            }
+
+            &__text {
+                color: $text-gray;
+                font-weight: 500;
+                font-size: $m-fs-h4;
+            }
+
+            &:hover {
+                transform: rotateY(360deg);
+                background: linear-gradient(
+                    180deg,
+                    $peach 0%,
+                    $light-gray 100%
+                );
+            }
+        }
+
+        &__name {
+            margin-top: 0.8rem;
+            color: $text-gray;
+            font-weight: 500;
+            font-size: $m-fs-h4;
+        }
     }
 }
