@@ -56,10 +56,11 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                     <ul className='experience-card__top-container__link-box'>
                         {link.map((li) => (
                             <Link
+                                key={li.icon}
                                 to={li.to}
                                 className='experience-card__top-container__link'
                             >
-                                <li key={li.icon}>
+                                <li>
                                     <button>
                                         <li.icon className='experience-card__top-container__link__icon' />
                                     </button>
@@ -78,7 +79,10 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                         </div>
                         <ul className='experience-card__bottom-container__skill__list'>
                             {frontend.map((li) => (
-                                <li className='experience-card__bottom-container__skill__li'>
+                                <li
+                                    key={li}
+                                    className='experience-card__bottom-container__skill__li'
+                                >
                                     {li}
                                 </li>
                             ))}

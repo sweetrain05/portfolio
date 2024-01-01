@@ -89,14 +89,14 @@ const Header: React.FC = () => {
                                     ref={navOverlayRef}
                                 >
                                     {navList.map((li) => (
-                                        <li key={li}>
+                                        <li key={li.title}>
                                             <button
                                                 className='header__nav-overlay__li'
                                                 onClick={() =>
-                                                    handleNavClick(li)
+                                                    handleNavClick(li.title)
                                                 }
                                             >
-                                                {li.toUpperCase()}
+                                                {li.title.toUpperCase()}
                                             </button>
                                         </li>
                                     ))}
@@ -108,12 +108,12 @@ const Header: React.FC = () => {
                     {windowWidth > tabletWidth && (
                         <ul className='header__nav-list'>
                             {navList.slice(0, -1).map((li) => (
-                                <li key={li}>
+                                <li key={li.title}>
                                     <button
                                         className='header__nav-list__btn'
-                                        onClick={() => handleNavClick(li)}
+                                        onClick={() => handleNavClick(li.title)}
                                     >
-                                        {li.toUpperCase()}
+                                        {li.title.toUpperCase()}
                                     </button>
                                 </li>
                             ))}

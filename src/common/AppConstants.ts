@@ -36,7 +36,12 @@ export const mobileWidth = 480;
 export const tabletWidth = 767;
 export const desktopWidth = 1024;
 
-export const navList = ['home', 'experiences', 'skills', 'contact'];
+export const navList = [
+    { title: 'home', to: '/' },
+    { title: 'experiences', to: '/experiences' },
+    { title: 'skills', to: '/skills' },
+    { title: 'contact', to: '/contact' },
+];
 
 export const extLinkList = [
     { icon: BsLinkedin, link: 'https://www.linkedin.com/in/danbi-choi/' },

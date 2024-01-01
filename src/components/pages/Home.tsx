@@ -62,7 +62,7 @@ const Home: React.FC = () => {
                         <HighlightCard key={work.title} data={work} />
                     ))}
                 </div>
-                <Link to='/experience'>
+                <Link to='/experiences'>
                     <button className='home__highlight__btn btn'>
                         SEE ALL WORKS{' '}
                         <MdKeyboardDoubleArrowRight className='home__highlight__btn__icon' />
@@ -76,10 +76,12 @@ const Home: React.FC = () => {
                 </h1>
                 <p className='home__contact-banner__text'>
                     Looking for a full-stack developer with front-end expertise?
-                </p>
-                <button className='home__contact-banner__btn btn'>
-                    LET'S TALK!
-                </button>
+                </p>{' '}
+                <Link to='/contact'>
+                    <button className='home__contact-banner__btn btn'>
+                        LET'S TALK!
+                    </button>
+                </Link>
             </section>
         </section>
     );

@@ -20,15 +20,15 @@ const Footer: React.FC = () => {
                 <nav>
                     <ul className='footer__nav-list'>
                         {navList.map((li) => (
-                            <li key={li}>
+                            <li key={li.title}>
                                 <button
                                     className='footer__nav-list__btn'
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        navigate(li);
+                                        navigate(li.to);
                                     }}
                                 >
-                                    {li.toUpperCase()}
+                                    {li.title.toUpperCase()}
                                 </button>
                             </li>
                         ))}

@@ -42,6 +42,7 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
                 <ul className='home__highlight__card__icons__container'>
                     {link.map((li) => (
                         <a
+                            key={li.to}
                             href={li.to}
                             target={
                                 li.linkTitle === 'experience page'
@@ -50,10 +51,7 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
                             }
                             rel='noopener noreferrer'
                         >
-                            <li
-                                key={li.to}
-                                className='home__highlight__card__icons__icon-box'
-                            >
+                            <li className='home__highlight__card__icons__icon-box'>
                                 <li.icon className='home__highlight__card__icons__icon' />
                             </li>
                         </a>

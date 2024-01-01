@@ -10,17 +10,13 @@
     }
 
     &__skills-container {
-        // display: flex;
-        // flex-direction: row;
-        // flex-wrap: wrap;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         gap: 2.3rem;
         text-align: center;
 
         &__img-box {
-            width: 113px;
-            height: 113px;
+            min-height: 140px;
             border-radius: 5px;
             background-color: $light-gray;
             display: flex;
@@ -36,7 +32,7 @@
             &__text {
                 color: $text-gray;
                 font-weight: 500;
-                font-size: $m-fs-h4;
+                font-size: $m-fs-h3;
             }
 
             &:hover {
