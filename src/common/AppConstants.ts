@@ -31,6 +31,10 @@ import gitImg from '../assets/images/skills/git.svg';
 import npmImg from '../assets/images/skills/npm.svg';
 import vercelImg from '../assets/images/skills/vercel.svg';
 import vscodeImg from '../assets/images/skills/vscode.svg';
+import youngLeeHanImg from '../assets/images/projects/YoungLeeHan Ecommerce.png';
+import witnessPartnersImg from '../assets/images/projects/Corp Website.png';
+import weatherAppImg from '../assets/images/projects/Weather Web App.png';
+import lgLogo from '../assets/images/projects/LGHausys_logo.png';
 
 export const mobileWidth = 480;
 export const tabletWidth = 767;
@@ -126,6 +130,7 @@ export const experiencesCardData = [
         jobTitle: 'Full-stack Developer',
         title: 'ECommerce Website',
         subtitle: 'YoungLeeHan Korean, U.S.',
+        image: youngLeeHanImg,
         description:
             'Developed a dynamic e-commerce website featuring 35+page routes. The website offers K-culture blog and a platform for selling learning materials. It also provides an admin panel with multiple privilege levels, enabling efficient site administration.',
         link: [
@@ -170,6 +175,7 @@ export const experiencesCardData = [
         jobTitle: 'Front-end Developer',
         title: 'Corporate Website',
         subtitle: 'Witness Creative Corp., U.S.',
+        image: witnessPartnersImg,
         description:
             'Built a mobile-responsive website introducing the company and dynamically listing articles fetched from blog.',
         link: [
@@ -206,10 +212,11 @@ export const experiencesCardData = [
     },
     {
         jobTitle: 'Product Manager in Marketing',
-        title: 'Project Management & Wireframing',
+        title: 'Product Management & Project Management',
         subtitle: 'LG Hausys, Ltd., Seoul, South Korea | 2014 - 2018',
+        image: lgLogo,
         explanation: [
-            'Demonstrated strong project management skills by setting and executing specific bi-weekly action plans and facilitating smooth collaborations.',
+            'Demonstrated strong product management skills by setting and executing specific bi-weekly action plans and facilitating smooth collaborations.',
             'Created wireframes for various marketing materials, such as product preview websites, sample books, brochures, and product application guides.',
         ],
     },
@@ -219,6 +226,7 @@ export const projectsCardData = [
     {
         title: 'Web App.',
         subtitle: 'Weather and News by Zip Code',
+        image: weatherAppImg,
         description:
             'Built a site enabling users to search for local weather and related news articles by entering their zip code.',
         link: [
@@ -306,8 +314,9 @@ export const skillList = [
         title: 'Specialties',
         list: [
             { name: 'Responsive Design' },
-            { name: 'Design-thinking' },
             { name: 'Pixel-perfect design' },
+            { name: 'Accessibility' },
+            { name: 'Design-thinking' },
             { name: 'Agile/Scrum' },
             { name: 'Project Management' },
         ],

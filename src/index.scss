@@ -79,6 +79,12 @@ a:hover {
     }
 }
 
+@mixin tablet__desktop {
+    @media screen and (min-width: 767px) {
+        @content;
+    }
+}
+
 @mixin mobile-center {
     @include mobile {
         text-align: center;

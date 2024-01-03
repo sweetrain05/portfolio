@@ -11,6 +11,7 @@ type experienceDataType = {
     jobTitle?: string;
     title: string;
     subtitle: string;
+    image?: string;
     description?: string;
     link?: linkDataType[];
     frontend?: string[];
@@ -23,6 +24,7 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
         jobTitle = '',
         title,
         subtitle,
+        image = '',
         description = '',
         link = [],
         frontend = [],
@@ -38,38 +40,40 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
             <div className='experience-card__top-container'>
                 <div className='experience-card__top-container__img-box'>
                     <img
-                        src=''
-                        alt=''
+                        src={image}
+                        alt={title}
                         className='experience-card__top-container__img'
                     />
                 </div>
-                <h3 className='experience-card__top-container__title'>
-                    {title}
-                </h3>
-                <h5 className='experience-card__top-container__subtitle'>
-                    {subtitle}
-                </h5>
-                <p className='experience-card__top-container__description'>
-                    {description}
-                </p>
-                {link.length > 0 && (
-                    <ul className='experience-card__top-container__link-box'>
-                        {link.map((li) => (
-                            <a
-                                key={li.icon}
-                                href={li.to}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <button>
-                                    <li className='experience-card__top-container__link'>
-                                        <li.icon className='experience-card__top-container__link__icon' />
-                                    </li>
-                                </button>
-                            </a>
-                        ))}
-                    </ul>
-                )}
+                <div className='experience-card__top-container__desc-box'>
+                    <h3 className='experience-card__top-container__title'>
+                        {title}
+                    </h3>
+                    <h5 className='experience-card__top-container__subtitle'>
+                        {subtitle}
+                    </h5>
+                    <p className='experience-card__top-container__description'>
+                        {description}
+                    </p>
+                    {link.length > 0 && (
+                        <ul className='experience-card__top-container__link-box'>
+                            {link.map((li) => (
+                                <a
+                                    key={li.icon}
+                                    href={li.to}
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >
+                                    <button>
+                                        <li className='experience-card__top-container__link'>
+                                            <li.icon className='experience-card__top-container__link__icon' />
+                                        </li>
+                                    </button>
+                                </a>
+                            ))}
+                        </ul>
+                    )}
+                </div>
             </div>
             <div className='experience-card__bottom-container'>
                 {frontend.length > 0 && (

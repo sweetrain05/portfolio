@@ -39,8 +39,8 @@ const Experiences: React.FC = () => {
                 Projects
             </h1>
             <section className='experiences__projects'>
-                {projectsCardData.map((pro) => (
-                    <ExperienceCard data={pro} key={pro.title} />
+                {projectsCardData.map((proj) => (
+                    <ExperienceCard data={proj} key={proj.title} />
                 ))}
             </section>
         </section>

@@ -32,31 +32,33 @@ const Contact: React.FC = () => {
     return (
         <>
             <section className='contact'>
-                <div className='contact__img-container'>
-                    <img
-                        className='contact__img-container__img'
-                        src={profileIMG}
-                        alt='profile'
-                    />
+                <div className='contact__my-info'>
+                    <div className='contact__img-container'>
+                        <img
+                            className='contact__img-container__img'
+                            src={profileIMG}
+                            alt='profile'
+                        />
+                    </div>
+                    <ul className='contact__links-container'>
+                        {contactLinks.map((li) => (
+                            <li key={li.title}>
+                                <a
+                                    href={li.link}
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <button className='contact__links-container__btn'>
+                                        <li.icon className='contact__links-container__btn__icon' />
+                                        <h1 className='contact__links-container__btn__description'>
+                                            {li.title}
+                                        </h1>
+                                    </button>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-                <ul className='contact__links-container'>
-                    {contactLinks.map((li) => (
-                        <li key={li.title}>
-                            <a
-                                href={li.link}
-                                target='_blank'
-                                rel='noopener noreferrer'
-                            >
-                                <button className='contact__links-container__btn'>
-                                    <li.icon className='contact__links-container__btn__icon' />
-                                    <h1 className='contact__links-container__btn__description'>
-                                        {li.title}
-                                    </h1>
-                                </button>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
                 <div className='contact__form'>
                     <h1 className='contact__form__title section-title'>
                         Contact

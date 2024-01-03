@@ -1,9 +1,16 @@
 @import '~/src/assets/styles/colors';
 @import '~/src/assets/styles/vars';
+@import '~/src/index.scss';
 
 .home {
     &__about-me {
         padding-bottom: 3rem;
+
+        @include tablet__desktop {
+            display: flex;
+            flex-direction: row;
+        }
+
         &__title {
             display: flex;
             flex-direction: row;
@@ -61,12 +68,15 @@
         }
 
         &__img-container {
-            text-align: center;
-            padding-top: 2rem;
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
         }
 
         &__img {
-            width: 150px;
+            @include tablet__desktop {
+                max-width: 200px;
+            }
         }
     }
 
@@ -103,6 +113,12 @@
             align-items: center;
             gap: 1rem;
             text-align: start;
+
+            @include desktop {
+                display: flex;
+                flex-direction: row;
+                align-items: first baseline;
+            }
         }
 
         &__btn {
@@ -170,8 +186,10 @@
             }
 
             &:hover {
-                background: $pink-gradation;
-                color: $white;
+                span {
+                    background: $pink-gradation;
+                    color: $white;
+                }
             }
         }
     }

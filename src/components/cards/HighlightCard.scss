@@ -1,5 +1,6 @@
 @import '~/src/assets/styles/colors';
 @import '~/src/assets/styles/vars';
+@import '~/src/index.scss';
 
 .home__highlight__card {
     width: 100%;
@@ -14,6 +15,10 @@
         #ededed 0%,
         rgba(237, 237, 237, 0) 100%
     );
+
+    @include desktop {
+        height: 422px;
+    }
 
     &:hover {
         background: linear-gradient(
