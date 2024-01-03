@@ -2,7 +2,11 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import profileIMG from '../../assets/images/profile.png';
 import HighlightCard from '../cards/HighlightCard';
-import { highlightWorks, mobileWidth } from '../../common/AppConstants';
+import {
+    highlightWorks,
+    mobileWidth,
+    tabletWidth,
+} from '../../common/AppConstants';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import './Home.scss';
 
@@ -46,13 +50,15 @@ const Home: React.FC = () => {
                     memes, trying out new recipes, and basically everything
                     related to creating something beautiful and yummy.
                 </div>
-                <div className='home__about-me__img-container'>
-                    <img
-                        src={profileIMG}
-                        alt='profile'
-                        className='home__about-me__img'
-                    />
-                </div>
+                {windowWidth > tabletWidth && (
+                    <div className='home__about-me__img-container'>
+                        <img
+                            src={profileIMG}
+                            alt='profile'
+                            className='home__about-me__img'
+                        />
+                    </div>
+                )}
             </section>
 
             <section className='home__highlight'>
@@ -63,9 +69,11 @@ const Home: React.FC = () => {
                     ))}
                 </div>
                 <Link to='/experiences'>
-                    <button className='home__highlight__btn btn'>
-                        SEE ALL WORKS{' '}
-                        <MdKeyboardDoubleArrowRight className='home__highlight__btn__icon' />
+                    <button className='home__highlight__btn'>
+                        <span className='btn'>
+                            SEE ALL WORKS{' '}
+                            <MdKeyboardDoubleArrowRight className='home__highlight__btn__icon' />
+                        </span>
                     </button>
                 </Link>
             </section>
@@ -78,8 +86,8 @@ const Home: React.FC = () => {
                     Looking for a full-stack developer with front-end expertise?
                 </p>{' '}
                 <Link to='/contact'>
-                    <button className='home__contact-banner__btn btn'>
-                        LET'S TALK!
+                    <button className='home__contact-banner__btn'>
+                        <span className='btn'>LET'S TALK!</span>
                     </button>
                 </Link>
             </section>

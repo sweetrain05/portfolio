@@ -51,9 +51,11 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
                             }
                             rel='noopener noreferrer'
                         >
-                            <li className='home__highlight__card__icons__icon-box'>
-                                <li.icon className='home__highlight__card__icons__icon' />
-                            </li>
+                            <button>
+                                <li className='home__highlight__card__icons__icon-box'>
+                                    <li.icon className='home__highlight__card__icons__icon' />
+                                </li>
+                            </button>
                         </a>
                     ))}
                 </ul>

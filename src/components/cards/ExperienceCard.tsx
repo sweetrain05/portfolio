@@ -55,17 +55,18 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                 {link.length > 0 && (
                     <ul className='experience-card__top-container__link-box'>
                         {link.map((li) => (
-                            <Link
+                            <a
                                 key={li.icon}
-                                to={li.to}
-                                className='experience-card__top-container__link'
+                                href={li.to}
+                                target='_blank'
+                                rel='noreferrer'
                             >
-                                <li>
-                                    <button>
+                                <button>
+                                    <li className='experience-card__top-container__link'>
                                         <li.icon className='experience-card__top-container__link__icon' />
-                                    </button>
-                                </li>
-                            </Link>
+                                    </li>
+                                </button>
+                            </a>
                         ))}
                     </ul>
                 )}

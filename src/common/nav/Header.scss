@@ -23,6 +23,10 @@
         background-color: transparent;
     }
 
+    &__btn {
+        padding: 0.5rem 0;
+    }
+
     &__logo {
         width: 45px;
         height: 45px;
@@ -88,7 +92,7 @@
 
     &__nav-overlay {
         position: absolute;
-        top: 4.1rem;
+        top: 5rem;
         right: 1rem;
         background-color: $gray;
         border-radius: 20px;
@@ -158,10 +162,14 @@
         }
 
         &__btn-highlight {
+            padding: 0.5rem 0;
             margin-left: 1.25rem;
-            font-weight: 500;
-            color: $white;
-            background: $pink-gradation;
+
+            span {
+                font-weight: 500;
+                color: $white;
+                background: $pink-gradation;
+            }
 
             &:hover {
                 @keyframes shake {

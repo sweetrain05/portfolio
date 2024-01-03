@@ -5,6 +5,7 @@ import {
     projectsCardData,
 } from '../../common/AppConstants';
 import './Experiences.scss';
+import { Link } from 'react-router-dom';
 
 const Experiences: React.FC = () => {
     return (
@@ -14,10 +15,18 @@ const Experiences: React.FC = () => {
                 <p className='experiences__resume__text'>
                     My formal resume is available here.
                 </p>
-                <button className='experiences__resume__btn btn'>
-                    <MdFileDownload />
-                    DOWNLOAD
-                </button>
+                <a
+                    href='https://drive.google.com/file/d/1M8V2Wbt3zbAT3pKt3HYOGVQc66xj-A2y/view?usp=sharing'
+                    target='_blank'
+                    rel='noreferrer'
+                >
+                    <button className='experiences__resume__btn'>
+                        <span className='btn'>
+                            <MdFileDownload />
+                            DOWNLOAD
+                        </span>
+                    </button>
+                </a>
             </section>
 
             <section className='experiences__exp'>

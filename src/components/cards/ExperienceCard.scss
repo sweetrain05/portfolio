@@ -70,11 +70,12 @@
 
             &__icon {
                 font-size: $m-fs-h2;
-                margin-top: 0.4rem;
+                transition: 0.3s ease-in;
             }
 
             &:hover &__icon {
                 color: $bright-green;
+                scale: 1.1;
             }
         }
     }
@@ -127,6 +128,10 @@
                 margin-bottom: 0.5rem;
                 background-color: $gray;
                 color: $text-gray;
+
+                &:hover {
+                    color: $bright-green;
+                }
             }
         }
 

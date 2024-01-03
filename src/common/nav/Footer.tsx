@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
                         e.preventDefault();
                         navigate('/');
                     }}
+                    className='footer__btn'
                 >
                     <img src={logo} alt='logo' className='footer__logo' />
                 </button>

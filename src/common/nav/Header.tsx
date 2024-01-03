@@ -60,7 +60,10 @@ const Header: React.FC = () => {
     return (
         <div className='header'>
             <div className='header__container'>
-                <button onClick={() => handleNavClick('home')}>
+                <button
+                    onClick={() => handleNavClick('home')}
+                    className='header__btn'
+                >
                     <img src={logo} alt='logo' className='header__logo' />
                 </button>
                 <nav className='header__nav'>
@@ -119,10 +122,12 @@ const Header: React.FC = () => {
                             ))}
                             <li>
                                 <button
-                                    className='header__nav-list__btn-highlight btn'
                                     onClick={() => handleNavClick('contact')}
+                                    className='header__nav-list__btn-highlight'
                                 >
-                                    {`Let's talk`.toUpperCase()}
+                                    <span className='btn'>
+                                        {`Let's talk`.toUpperCase()}
+                                    </span>
                                 </button>
                             </li>
                         </ul>

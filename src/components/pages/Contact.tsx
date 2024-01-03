@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { ValidationError, useForm } from '@formspree/react';
 import { contactLinks } from '../../common/AppConstants';
 import TextInput, { TextInputType } from '../../common/TextInput';
+import profileIMG from '../../assets/images/profile.png';
 import './Contact.scss';
 
 const Contact: React.FC = () => {
@@ -20,8 +21,8 @@ const Contact: React.FC = () => {
                     shortly.
                 </p>
                 <Link to={'/'}>
-                    <button className='contact__form__input-container__after-form-submission__btn btn'>
-                        Go Home ⇀
+                    <button className='contact__form__input-container__after-form-submission__btn'>
+                        <span className='btn'>Go Home ⇀</span>
                     </button>
                 </Link>
             </div>
@@ -34,7 +35,7 @@ const Contact: React.FC = () => {
                 <div className='contact__img-container'>
                     <img
                         className='contact__img-container__img'
-                        src='https://catastic.pet/wp-content/uploads/2023/04/cute-white-british-cat-wearing-sunglasses-yellow-fabric-hammock-isolated-yellow-background-1.jpg'
+                        src={profileIMG}
                         alt='profile'
                     />
                 </div>
@@ -113,9 +114,11 @@ const Contact: React.FC = () => {
                         <button
                             type='submit'
                             disabled={state.submitting}
-                            className='contact__form__input-container__btn btn'
+                            className='contact__form__input-container__btn'
                         >
-                            {state.submitting ? 'Sending...' : 'Send'}
+                            <span className='btn'>
+                                {state.submitting ? 'Sending...' : 'Send'}
+                            </span>
                         </button>
                     </form>
                 </div>
