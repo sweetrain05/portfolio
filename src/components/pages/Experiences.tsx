@@ -38,7 +38,7 @@ const Experiences: React.FC = () => {
                     My formal resume is available here.
                 </p>
                 <a
-                    href='https://drive.google.com/file/d/1M8V2Wbt3zbAT3pKt3HYOGVQc66xj-A2y/view?usp=sharing'
+                    href='https://drive.google.com/file/d/1kcqQ2U5Zp6AXxuGQndwxAmy59qiz7q8d/view?usp=sharing'
                     target='_blank'
                     rel='noreferrer'
                 >

@@ -243,7 +243,7 @@ export const projectsCardData = [
             },
             {
                 icon: BsBoxArrowUpRight,
-                to: null,
+                to: 'https://www.danbichoi.com/',
                 linkTitle: 'demo',
             },
         ],
