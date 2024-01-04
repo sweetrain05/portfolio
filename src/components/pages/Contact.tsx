@@ -15,7 +15,7 @@ import './Contact.scss';
 const Contact: React.FC = () => {
     useScrollToTop();
 
-    const [state, handleSubmit] = useForm('mdorkoqr');
+    const [state, handleSubmit] = useForm(process.env.REACT_APP_FORMSPREE_KEY);
 
     if (state.succeeded) {
         return (
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
                             icon={BsPersonFill}
                             placeholder='Your name'
                             required
-                            autofocus
+                            autoFocus
                         />
                         <ValidationError
                             field='Full Name'
