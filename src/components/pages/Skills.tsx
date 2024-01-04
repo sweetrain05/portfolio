@@ -1,7 +1,9 @@
 import { skillList } from '../../common/AppConstants';
+import useScrollToTop from '../../hooks/useScrollToTop';
 import './Skills.scss';
 
 const Skills: React.FC = () => {
+    useScrollToTop();
     return (
         <section className='skills'>
             <h1 className='skills__title section-title'>Skills</h1>

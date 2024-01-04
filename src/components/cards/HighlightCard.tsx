@@ -23,10 +23,7 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
 
     return (
         <article className='home__highlight__card'>
-            <Link
-                to={link[0].to}
-                className='home__highlight__card__title__link'
-            >
+            <a href={link[0].to} className='home__highlight__card__title__link'>
                 <div className='home__highlight__card__color-circle'>
                     <div className='home__highlight__card__color-circle__inner'></div>
                 </div>
@@ -37,7 +34,7 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
                 <p className='home__highlight__card__description'>
                     {description}
                 </p>
-            </Link>
+            </a>
             <div className='home__highlight__card__icons'>
                 <ul className='home__highlight__card__icons__container'>
                     {link.map((li) => (

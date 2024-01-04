@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                         </li>
                     ))}
                 </ul>
-                <h3>© 2023 DAN BI CHOI</h3>
+                <h3>© 2023 Created by DANBI CHOI</h3>
             </div>
         </div>
     );

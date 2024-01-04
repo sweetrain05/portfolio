@@ -8,10 +8,12 @@ import {
     tabletWidth,
 } from '../../common/AppConstants';
 import useWindowWidth from '../../hooks/useWindowWidth';
+import useScrollToTop from '../../hooks/useScrollToTop';
 import './Home.scss';
 
 const Home: React.FC = () => {
     const windowWidth = useWindowWidth();
+    useScrollToTop();
 
     return (
         <section className='home'>

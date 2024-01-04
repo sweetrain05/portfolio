@@ -32,23 +32,32 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
         explanation,
     } = data;
 
+    let demoLink;
+    if (link.length > 2) demoLink = link[2].to;
+    else if (link.length > 1) demoLink = link[1].to;
+
     return (
-        <article className='experience-card'>
+        <article className='experience-card' id={title.replace(/\s+/g, '')}>
             {jobTitle && (
                 <h1 className='experience-card__jobTitle'>{jobTitle}</h1>
             )}
             <div className='experience-card__top-container'>
-                <div className='experience-card__top-container__img-box'>
-                    <img
-                        src={image}
-                        alt={title}
-                        className='experience-card__top-container__img'
-                    />
-                </div>
+                {' '}
+                <a href={demoLink} target='_blank' rel='noreferrer'>
+                    <div className='experience-card__top-container__img-box'>
+                        <img
+                            src={image}
+                            alt={title}
+                            className='experience-card__top-container__img'
+                        />
+                    </div>
+                </a>
                 <div className='experience-card__top-container__desc-box'>
-                    <h3 className='experience-card__top-container__title'>
-                        {title}
-                    </h3>
+                    <a href={demoLink} target='_blank' rel='noreferrer'>
+                        <h3 className='experience-card__top-container__title'>
+                            {title}
+                        </h3>
+                    </a>
                     <h5 className='experience-card__top-container__subtitle'>
                         {subtitle}
                     </h5>
@@ -102,7 +111,10 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                         </div>
                         <ul className='experience-card__bottom-container__skill__list'>
                             {backend.map((li) => (
-                                <li className='experience-card__bottom-container__skill__li'>
+                                <li
+                                    key={li}
+                                    className='experience-card__bottom-container__skill__li'
+                                >
                                     {li}
                                 </li>
                             ))}
@@ -117,7 +129,10 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                     </div>
                     <ul className='experience-card__bottom-container__explanation'>
                         {explanation.map((li) => (
-                            <li className='experience-card__bottom-container__explanation__li'>
+                            <li
+                                key={li}
+                                className='experience-card__bottom-container__explanation__li'
+                            >
                                 {li}
                             </li>
                         ))}

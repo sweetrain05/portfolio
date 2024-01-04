@@ -1,18 +1,22 @@
+import { Link } from 'react-router-dom';
+import { ValidationError, useForm } from '@formspree/react';
 import {
     BsEnvelopeFill,
     BsFillChatLeftTextFill,
     BsPencilFill,
     BsPersonFill,
 } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
-import { ValidationError, useForm } from '@formspree/react';
 import { contactLinks } from '../../common/AppConstants';
 import TextInput, { TextInputType } from '../../common/TextInput';
 import profileIMG from '../../assets/images/profile.png';
+import useScrollToTop from '../../hooks/useScrollToTop';
 import './Contact.scss';
 
 const Contact: React.FC = () => {
+    useScrollToTop();
+
     const [state, handleSubmit] = useForm('mdorkoqr');
+
     if (state.succeeded) {
         return (
             <div className='contact__form__input-container__after-form-submission'>
@@ -76,6 +80,7 @@ const Contact: React.FC = () => {
                             icon={BsPersonFill}
                             placeholder='Your name'
                             required
+                            autofocus
                         />
                         <ValidationError
                             field='Full Name'

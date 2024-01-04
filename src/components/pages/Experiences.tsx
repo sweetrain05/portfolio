@@ -1,13 +1,35 @@
+import { useEffect } from 'react';
 import { MdFileDownload } from 'react-icons/md';
+import { useLocation } from 'react-router-dom';
 import ExperienceCard from '../cards/ExperienceCard';
 import {
     experiencesCardData,
     projectsCardData,
 } from '../../common/AppConstants';
+import useScrollToTop from '../../hooks/useScrollToTop';
 import './Experiences.scss';
-import { Link } from 'react-router-dom';
 
 const Experiences: React.FC = () => {
+    useScrollToTop();
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const elementId = location.hash.replace('#', '');
+        if (elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.scrollIntoView();
+
+                // Adjust for top margin
+                const scrolledY = window.scrollY;
+                if (scrolledY) {
+                    window.scroll(0, scrolledY - 100);
+                }
+            }
+        }
+    }, [location]);
+
     return (
         <section className='experiences'>
             <h1 className='experiences__title section-title'>Experiences</h1>
@@ -23,7 +45,7 @@ const Experiences: React.FC = () => {
                     <button className='experiences__resume__btn'>
                         <span className='btn'>
                             <MdFileDownload />
-                            DOWNLOAD
+                            RESUME
                         </span>
                     </button>
                 </a>

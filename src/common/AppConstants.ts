@@ -35,6 +35,7 @@ import youngLeeHanImg from '../assets/images/projects/YoungLeeHan Ecommerce.png'
 import witnessPartnersImg from '../assets/images/projects/Corp Website.png';
 import weatherAppImg from '../assets/images/projects/Weather Web App.png';
 import lgLogo from '../assets/images/projects/LGHausys_logo.png';
+import portfolioImg from '../assets/images/projects/Portfolio.png';
 
 export const mobileWidth = 480;
 export const tabletWidth = 767;
@@ -62,7 +63,7 @@ export const highlightWorks = [
         link: [
             {
                 icon: BsFileEarmarkTextFill,
-                to: '/experiences',
+                to: '/experiences#ECommerceWebsite',
                 linkTitle: 'experience page',
             },
             {
@@ -85,7 +86,7 @@ export const highlightWorks = [
         link: [
             {
                 icon: BsFileEarmarkTextFill,
-                to: '/experiences',
+                to: '/experiences#CorporateWebsite',
                 linkTitle: 'experience page',
             },
             {
@@ -101,14 +102,14 @@ export const highlightWorks = [
         ],
     },
     {
-        title: 'Web App',
+        title: 'Web App.',
         subtitle: 'Weather and News by Zip Code',
         description:
             'A web app enabling users to search for local weather and related news articles by entering their zip code.',
         link: [
             {
                 icon: BsFileEarmarkTextFill,
-                to: '/experiences',
+                to: '/experiences#WebApp.',
                 linkTitle: 'experience page',
             },
             {
@@ -223,6 +224,35 @@ export const experiencesCardData = [
 ];
 
 export const projectsCardData = [
+    {
+        title: 'Portfolio Website',
+        subtitle: 'My portfolio website',
+        image: portfolioImg,
+        description:
+            'Crafted a sophisticated online portfolio to exhibit my latest projects and skills, presenting a comprehensive overview of my professional capabilities.',
+        link: [
+            {
+                icon: BsGithub,
+                to: 'https://github.com/sweetrain05/portfolio',
+                linkTitle: 'github',
+            },
+            {
+                icon: BsPalette2,
+                to: 'https://www.figma.com/file/AwbxfP9w0xFnRT4hELEQuv/Portfolio?node-id=0%3A1&mode=dev',
+                linkTitle: 'figma',
+            },
+            {
+                icon: BsBoxArrowUpRight,
+                to: null,
+                linkTitle: 'demo',
+            },
+        ],
+        frontend: ['TypeScript', 'React', 'HTML5', 'SASS', 'Figma'],
+        explanation: [
+            'Engineered a mobile-responsive, four-page website using TypeScript and React emphasizing accessibility to ensure a seamless UX across various devices.',
+            'Developed through end-to-end lifecycle, from Figma design to deployment, demonstrating a thorough understanding of the development process.',
+        ],
+    },
     {
         title: 'Web App.',
         subtitle: 'Weather and News by Zip Code',
