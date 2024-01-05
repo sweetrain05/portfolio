@@ -6,14 +6,16 @@ import {
     BsPencilFill,
     BsPersonFill,
 } from 'react-icons/bs';
-import { contactLinks } from '../../common/AppConstants';
+import { contactLinks, tabletWidth } from '../../common/AppConstants';
 import TextInput, { TextInputType } from '../../common/TextInput';
 import profileIMG from '../../assets/images/profile.png';
 import useScrollToTop from '../../hooks/useScrollToTop';
+import useWindowWidth from '../../hooks/useWindowWidth';
 import './Contact.scss';
 
 const Contact: React.FC = () => {
     useScrollToTop();
+    const windowWidth = useWindowWidth();
 
     const [state, handleSubmit] = useForm(process.env.REACT_APP_FORMSPREE_KEY);
 
@@ -80,7 +82,7 @@ const Contact: React.FC = () => {
                             icon={BsPersonFill}
                             placeholder='Your name'
                             required
-                            autoFocus
+                            autoFocus={windowWidth > tabletWidth}
                         />
                         <ValidationError
                             field='Full Name'

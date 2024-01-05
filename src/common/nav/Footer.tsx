@@ -15,41 +15,40 @@ const Footer: React.FC = () => {
                         navigate('/');
                     }}
                     className='footer__btn'
+                    aria-label='Go to main page'
                 >
                     <img src={logo} alt='logo' className='footer__logo' />
                 </button>
                 <nav>
-                    <ul className='footer__nav-list'>
+                    <div className='footer__nav-list'>
                         {navList.map((li) => (
-                            <li key={li.title}>
-                                <button
-                                    className='footer__nav-list__btn'
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        navigate(li.to);
-                                    }}
-                                >
-                                    {li.title.toUpperCase()}
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                <ul className='footer__ext-link-list'>
-                    {extLinkList.map((li) => (
-                        <li key={li.link}>
-                            <a
-                                href={li.link}
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                aria-label={`Open new tab link to ${li.linkTitle}`}
-                                className='footer__ext-link-list__btn-icons'
+                            <button
+                                key={li.title}
+                                className='footer__nav-list__btn'
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    navigate(li.to);
+                                }}
                             >
-                                <li.icon className='footer__ext-link-list__btn-icons__icon' />
-                            </a>
-                        </li>
+                                {li.title.toUpperCase()}
+                            </button>
+                        ))}
+                    </div>
+                </nav>
+                <div className='footer__ext-link-list'>
+                    {extLinkList.map((li) => (
+                        <a
+                            key={li.link}
+                            href={li.link}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            aria-label={`Open new tab link to ${li.linkTitle}`}
+                            className='footer__ext-link-list__btn-icons'
+                        >
+                            <li.icon className='footer__ext-link-list__btn-icons__icon' />
+                        </a>
                     ))}
-                </ul>
+                </div>
                 <h3>© 2023 Created by DANBI CHOI</h3>
             </div>
         </div>

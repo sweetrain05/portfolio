@@ -1,8 +1,14 @@
+@import '~/src/index.scss';
+
 .page {
     display: grid;
     gap: 1rem;
-    grid-template-columns: #{'1fr min(1024px, calc(100% - 4rem)) 1fr'};
-    grid-template-rows: 200px auto;
+    grid-template-columns: #{'1fr min(1024px, 100%) 1fr'};
+    grid-template-rows: 150px auto;
+
+    @include tablet__desktop {
+        grid-template-columns: #{'1fr min(1024px, calc(100% - 4rem)) 1fr'};
+    }
 }
 
 .page > * {

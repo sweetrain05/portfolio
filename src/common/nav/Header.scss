@@ -32,9 +32,24 @@
         height: 45px;
         transition: transform 0.5s ease-in-out;
         background-color: transparent;
+        animation: rotate-circle 5s ease-in-out infinite;
+        transform-origin: center;
+
+        @keyframes rotate-circle {
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+            80% {
+                transform: rotate(360deg);
+            }
+            30% {
+                transform: rotate(0deg);
+            }
+        }
 
         &:hover {
-            transform: scale(1.15);
+            animation-play-state: paused;
         }
     }
 
@@ -98,6 +113,7 @@
         border-radius: 20px;
         list-style: none;
         padding: 0 1rem;
+        width: 40%;
 
         li {
             background-color: transparent;
