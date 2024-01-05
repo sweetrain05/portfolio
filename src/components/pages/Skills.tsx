@@ -9,7 +9,7 @@ const Skills: React.FC = () => {
             <h1 className='skills__title section-title'>Skills</h1>
             {skillList.map(({ title, list }) => (
                 <div key={title}>
-                    <h3 className='skills__subtitle'>{title.toUpperCase()}</h3>
+                    <h1 className='skills__subtitle'>{title.toUpperCase()}</h1>
                     <div className='skills__skills-container'>
                         {title === 'Specialties' ? (
                             <>

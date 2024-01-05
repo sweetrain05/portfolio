@@ -65,7 +65,7 @@
 
         &__text {
             font-weight: 500;
-            color: $dark-gray;
+            color: $text-gray;
             font-size: $m-fs-body;
             background-color: transparent;
         }
@@ -124,7 +124,7 @@
             text-align: start;
             padding: 0.5rem 0;
             margin: 0.4rem 0;
-            color: $dark-gray;
+            color: $text-gray;
             font-weight: 500;
 
             &:hover {

@@ -27,7 +27,7 @@ const Home: React.FC = () => {
                     </div>
 
                     <div className='home__about-me__p'>
-                        <h3>
+                        <h2>
                             Full-stack Developer
                             {windowWidth > mobileWidth ? (
                                 <>
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
                                 </>
                             )}
                             Front-end Developer
-                        </h3>
+                        </h2>
                         <br />
                         Expertised in{' '}
                         <span>React.js, JavaScript, TypeScript</span> with

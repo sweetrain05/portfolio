@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                         </a>
                     ))}
                 </div>
-                <h6>© 2023 Created by DANBI CHOI</h6>
+                <h1>© 2023 Created by DANBI CHOI</h1>
             </div>
         </div>
     );

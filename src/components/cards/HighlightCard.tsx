@@ -20,7 +20,6 @@ export type linkDataType = {
 
 const HighlightCard: React.FC<OwnProps> = ({ data }) => {
     const { title, subtitle, description, link } = data;
-    console.log(`Open new tab link to ${title}'s ${link[0].linkTitle}`);
 
     return (
         <article className='home__highlight__card'>
@@ -29,9 +28,9 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
                     <div className='home__highlight__card__color-circle__inner'></div>
                 </div>
 
-                <h3 className='home__highlight__card__title'>{title}</h3>
+                <h1 className='home__highlight__card__title'>{title}</h1>
 
-                <h5 className='home__highlight__card__subtitle'>{subtitle}</h5>
+                <h2 className='home__highlight__card__subtitle'>{subtitle}</h2>
                 <p className='home__highlight__card__description'>
                     {description}
                 </p>

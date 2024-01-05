@@ -54,13 +54,13 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                 </a>
                 <div className='experience-card__top-container__desc-box'>
                     <a href={demoLink} target='_blank' rel='noreferrer'>
-                        <h3 className='experience-card__top-container__title'>
+                        <h1 className='experience-card__top-container__title'>
                             {title}
-                        </h3>
+                        </h1>
                     </a>
-                    <h5 className='experience-card__top-container__subtitle'>
+                    <h1 className='experience-card__top-container__subtitle'>
                         {subtitle}
-                    </h5>
+                    </h1>
                     <p className='experience-card__top-container__description'>
                         {description}
                     </p>
