@@ -3,7 +3,7 @@
 .page {
     display: grid;
     gap: 1rem;
-    grid-template-columns: #{'1fr min(1024px, 100%) 1fr'};
+    grid-template-columns: #{'1fr min(1024px, 90%) 1fr'};
     grid-template-rows: 150px auto;
 
     @include tablet__desktop {

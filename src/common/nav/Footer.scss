@@ -1,5 +1,6 @@
 @import '~/src/assets/styles/colors';
 @import '~/src/assets/styles/vars';
+@import '~/src/index.scss';
 
 .footer {
     display: flex;
@@ -32,13 +33,18 @@
     &__ext-link-list {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         list-style: none;
 
         &__btn {
             padding: 0.5rem 0;
-            margin: 1.25rem;
+            margin: 0.7rem;
+            color: $black;
+
+            @include tablet__desktop {
+                margin: 1.5rem;
+            }
 
             &:hover {
                 color: $bright-green;
