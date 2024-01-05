@@ -42,10 +42,10 @@ const Footer: React.FC = () => {
                                 href={li.link}
                                 target='_blank'
                                 rel='noopener noreferrer'
+                                aria-label={`Open new tab link to ${li.linkTitle}`}
+                                className='footer__ext-link-list__btn-icons'
                             >
-                                <button className='footer__ext-link-list__btn-icons'>
-                                    <li.icon className='footer__ext-link-list__btn-icons__icon' />
-                                </button>
+                                <li.icon className='footer__ext-link-list__btn-icons__icon' />
                             </a>
                         </li>
                     ))}

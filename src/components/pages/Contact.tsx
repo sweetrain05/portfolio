@@ -24,10 +24,11 @@ const Contact: React.FC = () => {
                     Thank you for your interest! <br />I will get back to you
                     shortly.
                 </p>
-                <Link to={'/'}>
-                    <button className='contact__form__input-container__after-form-submission__btn'>
-                        <span className='btn'>Go Home ⇀</span>
-                    </button>
+                <Link
+                    to={'/'}
+                    className='contact__form__input-container__after-form-submission__btn'
+                >
+                    <span className='btn'>Go Home ⇀</span>
                 </Link>
             </div>
         );
@@ -44,24 +45,23 @@ const Contact: React.FC = () => {
                             alt='profile'
                         />
                     </div>
-                    <ul className='contact__links-container'>
+                    <div className='contact__links-container'>
                         {contactLinks.map((li) => (
-                            <li key={li.title}>
-                                <a
-                                    href={li.link}
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    <button className='contact__links-container__btn'>
-                                        <li.icon className='contact__links-container__btn__icon' />
-                                        <h1 className='contact__links-container__btn__description'>
-                                            {li.title}
-                                        </h1>
-                                    </button>
-                                </a>
-                            </li>
+                            <a
+                                key={li.title}
+                                href={li.link}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                aria-label={`Open new tab link to ${li.title}`}
+                                className='contact__links-container__btn'
+                            >
+                                <li.icon className='contact__links-container__btn__icon' />
+                                <h1 className='contact__links-container__btn__description'>
+                                    {li.title}
+                                </h1>
+                            </a>
                         ))}
-                    </ul>
+                    </div>
                 </div>
                 <div className='contact__form'>
                     <h1 className='contact__form__title section-title'>

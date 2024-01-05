@@ -20,6 +20,7 @@ export type linkDataType = {
 
 const HighlightCard: React.FC<OwnProps> = ({ data }) => {
     const { title, subtitle, description, link } = data;
+    console.log(`Open new tab link to ${title}'s ${link[0].linkTitle}`);
 
     return (
         <article className='home__highlight__card'>
@@ -36,7 +37,7 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
                 </p>
             </a>
             <div className='home__highlight__card__icons'>
-                <ul className='home__highlight__card__icons__container'>
+                <div className='home__highlight__card__icons__container'>
                     {link.map((li) => (
                         <a
                             key={li.to}
@@ -47,15 +48,13 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
                                     : '_blank'
                             }
                             rel='noopener noreferrer'
+                            aria-label={`Open new tab link to ${title}'s ${li.linkTitle}`}
+                            className='home__highlight__card__icons__icon-box'
                         >
-                            <button>
-                                <li className='home__highlight__card__icons__icon-box'>
-                                    <li.icon className='home__highlight__card__icons__icon' />
-                                </li>
-                            </button>
+                            <li.icon className='home__highlight__card__icons__icon' />
                         </a>
                     ))}
-                </ul>
+                </div>
             </div>
         </article>
     );

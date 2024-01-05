@@ -32,7 +32,7 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
         explanation,
     } = data;
 
-    let demoLink;
+    let demoLink: string;
     if (link.length > 2) demoLink = link[2].to;
     else if (link.length > 1) demoLink = link[1].to;
 
@@ -65,22 +65,20 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                         {description}
                     </p>
                     {link.length > 0 && (
-                        <ul className='experience-card__top-container__link-box'>
+                        <div className='experience-card__top-container__link-box'>
                             {link.map((li) => (
                                 <a
                                     key={li.icon}
                                     href={li.to}
                                     target='_blank'
                                     rel='noreferrer'
+                                    aria-label={`Open new tab link to ${title}'s ${li.linkTitle}`}
+                                    className='experience-card__top-container__link'
                                 >
-                                    <button>
-                                        <li className='experience-card__top-container__link'>
-                                            <li.icon className='experience-card__top-container__link__icon' />
-                                        </li>
-                                    </button>
+                                    <li.icon className='experience-card__top-container__link__icon' />
                                 </a>
                             ))}
-                        </ul>
+                        </div>
                     )}
                 </div>
             </div>

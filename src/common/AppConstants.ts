@@ -49,9 +49,21 @@ export const navList = [
 ];
 
 export const extLinkList = [
-    { icon: BsLinkedin, link: 'https://www.linkedin.com/in/danbi-choi/' },
-    { icon: BsGithub, link: 'https://github.com/sweetrain05' },
-    { icon: BsFillEnvelopeFill, link: 'mailto:sweetrain05@hotmail.com' },
+    {
+        icon: BsLinkedin,
+        link: 'https://www.linkedin.com/in/danbi-choi/',
+        linkTitle: 'Linked in',
+    },
+    {
+        icon: BsGithub,
+        link: 'https://github.com/sweetrain05',
+        linkTitle: 'Github',
+    },
+    {
+        icon: BsFillEnvelopeFill,
+        link: 'mailto:sweetrain05@hotmail.com',
+        linkTitle: 'Send Email',
+    },
 ];
 
 export const highlightWorks = [
@@ -297,7 +309,7 @@ export const contactLinks = [
         title: 'sweetrain05@hotmail.com',
         link: 'mailto:sweetrain05@hotmail.com',
     },
-    { icon: BsGeoAltFill, title: 'San Francisco Bay Area' },
+    { icon: BsGeoAltFill, title: 'San Francisco Bay Area', link: null },
 ];
 
 export const skillList = [

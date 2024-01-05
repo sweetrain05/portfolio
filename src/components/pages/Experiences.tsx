@@ -41,13 +41,12 @@ const Experiences: React.FC = () => {
                     href='https://drive.google.com/file/d/1kcqQ2U5Zp6AXxuGQndwxAmy59qiz7q8d/view?usp=sharing'
                     target='_blank'
                     rel='noreferrer'
+                    className='experiences__resume__btn'
                 >
-                    <button className='experiences__resume__btn'>
-                        <span className='btn'>
-                            <MdFileDownload />
-                            RESUME
-                        </span>
-                    </button>
+                    <span className='btn'>
+                        <MdFileDownload />
+                        RESUME
+                    </span>
                 </a>
             </section>
 
