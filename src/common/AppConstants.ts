@@ -142,7 +142,7 @@ export const experiencesCardData = [
     {
         jobTitle: 'Full-stack Developer',
         title: 'ECommerce Website',
-        subtitle: 'YoungLeeHan Korean, U.S.',
+        subtitle: 'YoungLeeHan Korean, U.S. | Aug. 2023',
         image: youngLeeHanImg,
         description:
             'Developed a dynamic e-commerce website featuring 35+page routes. The website offers K-culture blog and a platform for selling learning materials. It also provides an admin panel with multiple privilege levels, enabling efficient site administration.',
@@ -187,7 +187,7 @@ export const experiencesCardData = [
     {
         jobTitle: 'Front-end Developer',
         title: 'Corporate Website',
-        subtitle: 'Witness Creative Corp., U.S.',
+        subtitle: 'Witness Creative Corp., U.S. | July 2023',
         image: witnessPartnersImg,
         description:
             'Built a mobile-responsive website introducing the company and dynamically listing articles fetched from blog.',
@@ -238,7 +238,7 @@ export const experiencesCardData = [
 export const projectsCardData = [
     {
         title: 'Portfolio Website',
-        subtitle: 'My portfolio website',
+        subtitle: 'My portfolio website | Nov. 2023',
         image: portfolioImg,
         description:
             'Crafted a sophisticated online portfolio to exhibit my latest projects and skills, presenting a comprehensive overview of my professional capabilities.',
@@ -261,13 +261,14 @@ export const projectsCardData = [
         ],
         frontend: ['TypeScript', 'React', 'HTML5', 'SASS', 'Figma'],
         explanation: [
-            'Engineered a mobile-responsive, four-page website using TypeScript and React emphasizing accessibility to ensure a seamless UX across various devices.',
+            'Designed and engineered a mobile-responsive, four-page website using TypeScript and React emphasizing accessibility to ensure a seamless UX across various devices.',
+            'Achieved high-performance benchmarks, with scores exceeding 90 in Lighthouse evaluations across performance, accessibility, best practices, and SEO.',
             'Developed through end-to-end lifecycle, from Figma design to deployment, demonstrating a thorough understanding of the development process.',
         ],
     },
     {
         title: 'Web App.',
-        subtitle: 'Weather and News by Zip Code',
+        subtitle: 'Weather and News by Zip Code | Oct. 2022',
         image: weatherAppImg,
         description:
             'Built a site enabling users to search for local weather and related news articles by entering their zip code.',
