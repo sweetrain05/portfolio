@@ -59,6 +59,7 @@ const Experiences: React.FC = () => {
             <h1 className='experiences__projects__title section-title'>
                 Projects
             </h1>
+
             <section className='experiences__projects'>
                 {projectsCardData.map((proj) => (
                     <ExperienceCard data={proj} key={proj.title} />

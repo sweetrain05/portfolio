@@ -4,9 +4,9 @@ import {
     BsFillEnvelopeFill,
     BsFileEarmarkTextFill,
     BsBoxArrowUpRight,
-    BsPalette2,
     BsGeoAltFill,
 } from 'react-icons/bs';
+import { CgFigma } from 'react-icons/cg';
 import reactImg from '../assets/images/skills/react.svg';
 import reduxImg from '../assets/images/skills/redux.svg';
 import jsImg from '../assets/images/skills/javascript.svg';
@@ -76,7 +76,7 @@ export const highlightWorks = [
             {
                 icon: BsFileEarmarkTextFill,
                 to: '/experiences#ECommerceWebsite',
-                linkTitle: 'experience page',
+                linkTitle: 'read more',
             },
             {
                 icon: BsGithub,
@@ -89,6 +89,7 @@ export const highlightWorks = [
                 linkTitle: 'demo',
             },
         ],
+        image: youngLeeHanImg,
     },
     {
         title: 'Corporate Website',
@@ -99,7 +100,7 @@ export const highlightWorks = [
             {
                 icon: BsFileEarmarkTextFill,
                 to: '/experiences#CorporateWebsite',
-                linkTitle: 'experience page',
+                linkTitle: 'read more',
             },
             {
                 icon: BsGithub,
@@ -112,6 +113,7 @@ export const highlightWorks = [
                 linkTitle: 'demo',
             },
         ],
+        image: witnessPartnersImg,
     },
     {
         title: 'Web App.',
@@ -122,7 +124,7 @@ export const highlightWorks = [
             {
                 icon: BsFileEarmarkTextFill,
                 to: '/experiences#WebApp.',
-                linkTitle: 'experience page',
+                linkTitle: 'read more',
             },
             {
                 icon: BsGithub,
@@ -135,6 +137,7 @@ export const highlightWorks = [
                 linkTitle: 'demo',
             },
         ],
+        image: weatherAppImg,
     },
 ];
 
@@ -153,7 +156,7 @@ export const experiencesCardData = [
                 linkTitle: 'github',
             },
             {
-                icon: BsPalette2,
+                icon: CgFigma,
                 to: 'https://www.figma.com/file/MIrWsyWmRhPKf4AkfpPIBR/YoungLeeHan-Korean-(Copy)?node-id=0%3A1&mode=dev',
                 linkTitle: 'figma',
             },
@@ -198,7 +201,7 @@ export const experiencesCardData = [
                 linkTitle: 'github',
             },
             {
-                icon: BsPalette2,
+                icon: CgFigma,
                 to: 'https://www.figma.com/file/5kHQgvxup732yP5bTWsQpO/Witness-Corp.?mode=dev',
                 linkTitle: 'figma',
             },
@@ -249,7 +252,7 @@ export const projectsCardData = [
                 linkTitle: 'github',
             },
             {
-                icon: BsPalette2,
+                icon: CgFigma,
                 to: 'https://www.figma.com/file/AwbxfP9w0xFnRT4hELEQuv/Portfolio?node-id=0%3A1&mode=dev',
                 linkTitle: 'figma',
             },

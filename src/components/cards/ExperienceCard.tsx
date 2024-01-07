@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { BsFillBoxFill, BsFillCheckSquareFill } from 'react-icons/bs';
+import { BsFillBoxFill } from 'react-icons/bs';
 import { linkDataType } from './HighlightCard';
+import IconButton from '../../common/ui/IconButton';
 import './ExperienceCard.scss';
 
 type OwnProps = {
@@ -67,16 +67,7 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                     {link.length > 0 && (
                         <div className='experience-card__top-container__link-box'>
                             {link.map((li) => (
-                                <a
-                                    key={li.icon}
-                                    href={li.to}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    aria-label={`Open new tab link to ${title}'s ${li.linkTitle}`}
-                                    className='experience-card__top-container__link'
-                                >
-                                    <li.icon className='experience-card__top-container__link__icon' />
-                                </a>
+                                <IconButton data={li} title={title} />
                             ))}
                         </div>
                     )}

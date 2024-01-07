@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import IconButton from '../../common/ui/IconButton';
 import './HighlightCard.scss';
 
 type OwnProps = {
@@ -10,6 +10,7 @@ type highlightDataType = {
     subtitle: string;
     description: string;
     link: linkDataType[];
+    image: string;
 };
 
 export type linkDataType = {
@@ -19,39 +20,33 @@ export type linkDataType = {
 };
 
 const HighlightCard: React.FC<OwnProps> = ({ data }) => {
-    const { title, subtitle, description, link } = data;
+    const { title, subtitle, description, link, image } = data;
 
     return (
         <article className='home__highlight__card'>
-            <a href={link[0].to} className='home__highlight__card__title__link'>
-                <div className='home__highlight__card__color-circle'>
-                    <div className='home__highlight__card__color-circle__inner'></div>
+            <a href={link[0].to} className='home__highlight__card__link'>
+                <div className='home__highlight__card__img-box'>
+                    <img
+                        src={image}
+                        alt={title}
+                        className='home__highlight__card__img-box__img'
+                    />
                 </div>
+                <div>
+                    <h1 className='home__highlight__card__title'>{title}</h1>
 
-                <h1 className='home__highlight__card__title'>{title}</h1>
-
-                <h2 className='home__highlight__card__subtitle'>{subtitle}</h2>
-                <p className='home__highlight__card__description'>
-                    {description}
-                </p>
+                    <h2 className='home__highlight__card__subtitle'>
+                        {subtitle}
+                    </h2>
+                    <p className='home__highlight__card__description'>
+                        {description}
+                    </p>
+                </div>
             </a>
             <div className='home__highlight__card__icons'>
                 <div className='home__highlight__card__icons__container'>
                     {link.map((li) => (
-                        <a
-                            key={li.to}
-                            href={li.to}
-                            target={
-                                li.linkTitle === 'experience page'
-                                    ? '_self'
-                                    : '_blank'
-                            }
-                            rel='noopener noreferrer'
-                            aria-label={`Open new tab link to ${title}'s ${li.linkTitle}`}
-                            className='home__highlight__card__icons__icon-box'
-                        >
-                            <li.icon className='home__highlight__card__icons__icon' />
-                        </a>
+                        <IconButton data={li} title={title} />
                     ))}
                 </div>
             </div>

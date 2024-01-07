@@ -1,0 +1,39 @@
+@import '~/src/assets/styles/colors';
+@import '~/src/assets/styles/vars';
+
+.icon-button {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: $gray;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+        background-color: $light-gray;
+    }
+
+    &__icon {
+        font-size: $m-fs-h2;
+        transition: 0.1s ease-in;
+    }
+
+    &:hover &__icon {
+        color: $white;
+        scale: 1.1;
+    }
+
+    &__hovered-text {
+        position: absolute;
+        font-size: 0.8rem;
+        color: $bright-green;
+        font-weight: 500;
+        line-height: 0.8rem;
+        text-align: center;
+    }
+}

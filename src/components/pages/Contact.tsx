@@ -7,7 +7,7 @@ import {
     BsPersonFill,
 } from 'react-icons/bs';
 import { contactLinks, tabletWidth } from '../../common/AppConstants';
-import TextInput, { TextInputType } from '../../common/TextInput';
+import TextInput, { TextInputType } from '../../common/ui/TextInput';
 import profileIMG from '../../assets/images/profile.png';
 import useScrollToTop from '../../hooks/useScrollToTop';
 import useWindowWidth from '../../hooks/useWindowWidth';
