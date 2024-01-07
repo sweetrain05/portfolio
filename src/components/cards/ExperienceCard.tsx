@@ -1,6 +1,8 @@
+import { useMemo } from 'react';
 import { BsFillBoxFill } from 'react-icons/bs';
 import { linkDataType } from './HighlightCard';
 import IconButton from '../../common/ui/IconButton';
+import Tag from '../../common/ui/Tag';
 import './ExperienceCard.scss';
 
 type OwnProps = {
@@ -32,9 +34,23 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
         explanation,
     } = data;
 
-    let demoLink: string;
-    if (link.length > 2) demoLink = link[2].to;
-    else if (link.length > 1) demoLink = link[1].to;
+    const demoLink = useMemo(() => {
+        if (link.length > 2) return link[2].to;
+        else if (link.length > 1) return link[1].to;
+        else if (link.length === 0) return null;
+    }, [link]);
+
+    const linkProps = useMemo(() => {
+        if (!demoLink) {
+            return {};
+        } else {
+            return {
+                href: demoLink,
+                target: '_blank',
+                rel: 'noreferrer',
+            };
+        }
+    }, [demoLink]);
 
     return (
         <article className='experience-card' id={title.replace(/\s+/g, '')}>
@@ -42,22 +58,21 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                 <h1 className='experience-card__jobTitle'>{jobTitle}</h1>
             )}
             <div className='experience-card__top-container'>
-                {' '}
-                <a href={demoLink} target='_blank' rel='noreferrer'>
-                    <div className='experience-card__top-container__img-box'>
+                <div className='experience-card__top-container__img-box'>
+                    <Tag as={demoLink ? 'a' : 'div'} {...linkProps}>
                         <img
                             src={image}
                             alt={title}
                             className='experience-card__top-container__img'
                         />
-                    </div>
-                </a>
+                    </Tag>
+                </div>
                 <div className='experience-card__top-container__desc-box'>
-                    <a href={demoLink} target='_blank' rel='noreferrer'>
+                    <Tag as={demoLink ? 'a' : 'div'} {...linkProps}>
                         <h1 className='experience-card__top-container__title'>
                             {title}
                         </h1>
-                    </a>
+                    </Tag>
                     <h1 className='experience-card__top-container__subtitle'>
                         {subtitle}
                     </h1>
@@ -67,7 +82,11 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                     {link.length > 0 && (
                         <div className='experience-card__top-container__link-box'>
                             {link.map((li) => (
-                                <IconButton data={li} title={title} />
+                                <IconButton
+                                    key={li.linkTitle}
+                                    data={li}
+                                    title={title}
+                                />
                             ))}
                         </div>
                     )}

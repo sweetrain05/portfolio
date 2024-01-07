@@ -46,7 +46,11 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
             <div className='home__highlight__card__icons'>
                 <div className='home__highlight__card__icons__container'>
                     {link.map((li) => (
-                        <IconButton data={li} title={title} />
+                        <IconButton
+                            key={li.linkTitle}
+                            data={li}
+                            title={title}
+                        />
                     ))}
                 </div>
             </div>

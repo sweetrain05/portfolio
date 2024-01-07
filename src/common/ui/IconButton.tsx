@@ -7,7 +7,7 @@ type OwnProps = {
 };
 
 type IconButtonDataType = {
-    icon: any;
+    icon: React.ElementType;
     to: string;
     linkTitle: string;
 };
@@ -25,7 +25,6 @@ const IconButton: React.FC<OwnProps> = ({ data, title }) => {
 
     return (
         <a
-            key={data.icon}
             href={data.to}
             target={target}
             rel='noreferrer'
@@ -35,6 +34,8 @@ const IconButton: React.FC<OwnProps> = ({ data, title }) => {
             className='icon-button'
             onMouseOver={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={() => setIsHovered(true)}
+            onTouchEnd={() => setIsHovered(false)}
         >
             <data.icon className='icon-button__icon' />
             {isHovered && (

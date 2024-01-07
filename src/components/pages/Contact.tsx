@@ -8,6 +8,7 @@ import {
 } from 'react-icons/bs';
 import { contactLinks, tabletWidth } from '../../common/AppConstants';
 import TextInput, { TextInputType } from '../../common/ui/TextInput';
+import ContactLink from '../cards/ContactLink';
 import profileIMG from '../../assets/images/profile.png';
 import useScrollToTop from '../../hooks/useScrollToTop';
 import useWindowWidth from '../../hooks/useWindowWidth';
@@ -49,22 +50,11 @@ const Contact: React.FC = () => {
                     </div>
                     <div className='contact__links-container'>
                         {contactLinks.map((li) => (
-                            <a
-                                key={li.title}
-                                href={li.link}
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                aria-label={`Open new tab link to ${li.title}`}
-                                className='contact__links-container__btn'
-                            >
-                                <li.icon className='contact__links-container__btn__icon' />
-                                <h1 className='contact__links-container__btn__description'>
-                                    {li.title}
-                                </h1>
-                            </a>
+                            <ContactLink key={li.title} data={li} />
                         ))}
                     </div>
                 </div>
+
                 <div className='contact__form'>
                     <h1 className='contact__form__title section-title'>
                         Contact

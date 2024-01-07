@@ -313,7 +313,7 @@ export const contactLinks = [
         title: 'sweetrain05@hotmail.com',
         link: 'mailto:sweetrain05@hotmail.com',
     },
-    { icon: BsGeoAltFill, title: 'San Francisco Bay Area', link: null },
+    { icon: BsGeoAltFill, title: 'San Francisco Bay Area' },
 ];
 
 export const skillList = [
