@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import './IconButton.scss';
 
 type OwnProps = {
@@ -14,6 +14,10 @@ type IconButtonDataType = {
 
 const IconButton: React.FC<OwnProps> = ({ data, title }) => {
     const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        setIsHovered(false);
+    }, []);
 
     const target = useMemo(() => {
         if (data.to && data.to[0] === '/') {

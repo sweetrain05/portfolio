@@ -13,21 +13,23 @@ type contactDataType = {
 };
 
 const ContactLink: React.FC<OwnProps> = ({ data }) => {
+    const { title, link } = data;
+
     const linkProps = useMemo(() => {
-        if (!data.link) return { className: 'contact-link' };
+        if (!link) return { className: 'contact-link' };
         else
             return {
-                href: data.link,
+                href: link,
                 target: '_blank',
                 rel: 'noreferrer noopener',
                 className: 'contact-link',
             };
-    }, [data.link]);
+    }, [link]);
 
     return (
         <Tag as={data.link ? 'a' : 'div'} {...linkProps}>
             <data.icon className='contact-link__icon' />
-            <h1 className='contact-link__description'>{data.title}</h1>
+            <h1 className='contact-link__description'>{title}</h1>
         </Tag>
     );
 };

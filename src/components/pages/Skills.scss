@@ -14,42 +14,5 @@
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 2.3rem;
         text-align: center;
-
-        &__img-box {
-            min-height: 100px;
-            border-radius: 5px;
-            background-color: $light-gray;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.5s ease-in;
-            cursor: pointer;
-
-            &__img {
-                width: 60px;
-            }
-
-            &__text {
-                color: $text-gray;
-                font-weight: 500;
-                font-size: $m-fs-h3;
-            }
-
-            &:hover {
-                transform: rotateY(360deg);
-                background: linear-gradient(
-                    180deg,
-                    $peach 0%,
-                    $light-gray 100%
-                );
-            }
-        }
-
-        &__name {
-            margin-top: 0.8rem;
-            color: $text-gray;
-            font-weight: 500;
-            font-size: $m-fs-h4;
-        }
     }
 }

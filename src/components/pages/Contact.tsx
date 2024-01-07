@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { ValidationError, useForm } from '@formspree/react';
 import {
     BsEnvelopeFill,
@@ -8,6 +7,7 @@ import {
 } from 'react-icons/bs';
 import { contactLinks, tabletWidth } from '../../common/AppConstants';
 import TextInput, { TextInputType } from '../../common/ui/TextInput';
+import FormSubmissionSuccess from '../sections/FormSubmissionSuccess';
 import ContactLink from '../cards/ContactLink';
 import profileIMG from '../../assets/images/profile.png';
 import useScrollToTop from '../../hooks/useScrollToTop';
@@ -21,20 +21,7 @@ const Contact: React.FC = () => {
     const [state, handleSubmit] = useForm(process.env.REACT_APP_FORMSPREE_KEY);
 
     if (state.succeeded) {
-        return (
-            <div className='contact__form__input-container__after-form-submission'>
-                <p>
-                    Thank you for your interest! <br />I will get back to you
-                    shortly.
-                </p>
-                <Link
-                    to={'/'}
-                    className='contact__form__input-container__after-form-submission__btn'
-                >
-                    <span className='btn'>Go Home ⇀</span>
-                </Link>
-            </div>
-        );
+        return <FormSubmissionSuccess />;
     }
 
     return (

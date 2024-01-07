@@ -33,6 +33,7 @@ const Experiences: React.FC = () => {
     return (
         <section className='experiences'>
             <h1 className='experiences__title section-title'>Experiences</h1>
+
             <section className='experiences__resume'>
                 <p className='experiences__resume__text'>
                     My formal resume is available here.
@@ -50,7 +51,7 @@ const Experiences: React.FC = () => {
                 </a>
             </section>
 
-            <section className='experiences__exp'>
+            <section>
                 {experiencesCardData.map((exp) => (
                     <ExperienceCard data={exp} key={exp.title} />
                 ))}
@@ -60,7 +61,7 @@ const Experiences: React.FC = () => {
                 Projects
             </h1>
 
-            <section className='experiences__projects'>
+            <section>
                 {projectsCardData.map((proj) => (
                     <ExperienceCard data={proj} key={proj.title} />
                 ))}

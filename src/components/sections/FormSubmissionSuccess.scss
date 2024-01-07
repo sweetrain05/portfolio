@@ -1,0 +1,30 @@
+@import '~/src/assets/styles/colors';
+@import '~/src/assets/styles/vars';
+
+.form-submission-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+
+    p {
+        font-size: $m-fs-h2;
+        color: $text-gray;
+    }
+
+    &__btn {
+        margin-top: 30px;
+        padding: 1rem 0;
+
+        span {
+            max-width: 200px;
+            color: $white;
+            background: $pink-gradation;
+        }
+
+        &:hover {
+            animation: shake 0.5s ease infinite;
+        }
+    }
+}
