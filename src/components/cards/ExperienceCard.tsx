@@ -58,15 +58,15 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                 <h1 className='experience-card__jobTitle'>{jobTitle}</h1>
             )}
             <div className='experience-card__top-container'>
-                <div className='experience-card__top-container__img-box'>
-                    <Tag as={demoLink ? 'a' : 'div'} {...linkProps}>
+                <Tag as={demoLink ? 'a' : 'div'} {...linkProps}>
+                    <div className='experience-card__top-container__img-box'>
                         <img
                             src={image}
                             alt={title}
                             className='experience-card__top-container__img'
                         />
-                    </Tag>
-                </div>
+                    </div>
+                </Tag>
                 <div className='experience-card__top-container__desc-box'>
                     <Tag as={demoLink ? 'a' : 'div'} {...linkProps}>
                         <h1 className='experience-card__top-container__title'>
