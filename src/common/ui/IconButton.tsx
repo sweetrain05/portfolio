@@ -48,6 +48,7 @@ const IconButton: React.FC<OwnProps> = ({ data, title }) => {
             onMouseLeave={() => setIsHovered(false)}
             onTouchStart={() => setIsHovered(true)}
             onTouchEnd={() => setIsHovered(false)}
+            onClick={() => setIsHovered(false)}
         >
             <data.icon className='icon-button__icon' />
             {isHovered && (

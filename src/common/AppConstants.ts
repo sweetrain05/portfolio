@@ -95,7 +95,7 @@ export const highlightWorks = [
         title: 'Web App.',
         subtitle: 'My Portfolio Website',
         description:
-            'A responsive web app crafted with TypeScript which achieved 95+ score in all Lighthouse evaluations.',
+            'A responsive web app coded with TypeScript achieving a score above 95 in all Lighthouse evaluations.',
         link: [
             {
                 icon: BsJustifyLeft,
@@ -264,8 +264,8 @@ export const projectsCardData = [
         ],
         frontend: ['TypeScript', 'React', 'HTML5', 'SASS', 'Figma'],
         explanation: [
-            'Designed and engineered a mobile-responsive, four-page website using TypeScript and React emphasizing accessibility to ensure a seamless UX across various devices.',
             'Achieved high-performance benchmarks, with scores exceeding 95 in Lighthouse evaluations across performance, accessibility, best practices, and SEO.',
+            'Designed and engineered a mobile-responsive, four-page website using TypeScript and React emphasizing accessibility to ensure a seamless UX across various devices.',
             'Developed through end-to-end lifecycle, from Figma design to deployment, demonstrating a thorough understanding of the development process.',
         ],
     },
