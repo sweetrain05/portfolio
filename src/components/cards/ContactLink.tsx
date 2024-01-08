@@ -6,7 +6,7 @@ type OwnProps = {
     data: contactDataType;
 };
 
-type contactDataType = {
+export type contactDataType = {
     icon: React.ElementType;
     title: string;
     link?: string;

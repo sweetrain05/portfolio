@@ -1,7 +1,7 @@
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import LandingView from '../sections/LandingView';
-import HighlightCard from '../cards/HighlightCard';
+import HighlightCard, { highlightDataType } from '../cards/HighlightCard';
 import { highlightWorks } from '../../common/AppConstants';
 import useScrollToTop from '../../hooks/useScrollToTop';
 import './Home.scss';
@@ -16,10 +16,11 @@ const Home: React.FC = () => {
             <section className='home__highlight'>
                 <h1 className='home__highlight__title'>Highlighted Works</h1>
                 <div className='home__highlight__card-box'>
-                    {highlightWorks.map((work) => (
+                    {highlightWorks.map((work: highlightDataType) => (
                         <HighlightCard key={work.title} data={work} />
                     ))}
                 </div>
+
                 <Link to='/experiences' className='home__highlight__btn'>
                     <span className='btn'>
                         SEE ALL WORKS{' '}

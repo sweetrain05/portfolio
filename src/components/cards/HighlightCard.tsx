@@ -5,7 +5,7 @@ type OwnProps = {
     data: highlightDataType;
 };
 
-type highlightDataType = {
+export type highlightDataType = {
     title: string;
     subtitle: string;
     description: string;
@@ -24,15 +24,18 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
 
     return (
         <article className='home__highlight__card'>
-            <a href={link[0].to} className='home__highlight__card__link'>
-                <div className='home__highlight__card__img-box'>
-                    <img
-                        src={image}
-                        alt={title}
-                        className='home__highlight__card__img-box__img'
-                    />
-                </div>
-                <div>
+            <div className='home__highlight__card__link'>
+                <a href={link[0].to}>
+                    <div className='home__highlight__card__img-box'>
+                        <img
+                            src={image}
+                            alt={title}
+                            className='home__highlight__card__img-box__img'
+                        />
+                    </div>
+                </a>
+
+                <div className='home__highlight__card__desc'>
                     <h1 className='home__highlight__card__title'>{title}</h1>
 
                     <h2 className='home__highlight__card__subtitle'>
@@ -42,7 +45,8 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
                         {description}
                     </p>
                 </div>
-            </a>
+            </div>
+
             <div className='home__highlight__card__icons'>
                 <div className='home__highlight__card__icons__container'>
                     {link.map((li) => (

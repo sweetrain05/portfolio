@@ -8,7 +8,7 @@ import {
 import { contactLinks, tabletWidth } from '../../common/AppConstants';
 import TextInput, { TextInputType } from '../../common/ui/TextInput';
 import FormSubmissionSuccess from '../sections/FormSubmissionSuccess';
-import ContactLink from '../cards/ContactLink';
+import ContactLink, { contactDataType } from '../cards/ContactLink';
 import profileIMG from '../../assets/images/profile.png';
 import useScrollToTop from '../../hooks/useScrollToTop';
 import useWindowWidth from '../../hooks/useWindowWidth';
@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
                         />
                     </div>
                     <div className='contact__links-container'>
-                        {contactLinks.map((li) => (
+                        {contactLinks.map((li: contactDataType) => (
                             <ContactLink key={li.title} data={li} />
                         ))}
                     </div>

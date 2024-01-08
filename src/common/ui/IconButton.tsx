@@ -13,10 +13,18 @@ type IconButtonDataType = {
 };
 
 const IconButton: React.FC<OwnProps> = ({ data, title }) => {
-    const [isHovered, setIsHovered] = useState(false);
+    const [isHovered, setIsHovered] = useState<boolean>(false);
 
     useEffect(() => {
-        setIsHovered(false);
+        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+            setIsHovered(false);
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
     }, []);
 
     const target = useMemo(() => {

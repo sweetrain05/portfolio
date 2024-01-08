@@ -19,6 +19,7 @@ const Footer: React.FC = () => {
                 >
                     <img src={logo} alt='logo' className='footer__logo' />
                 </button>
+
                 <nav>
                     <div className='footer__nav-list'>
                         {navList.map((li) => (
@@ -35,6 +36,7 @@ const Footer: React.FC = () => {
                         ))}
                     </div>
                 </nav>
+
                 <div className='footer__ext-link-list'>
                     {extLinkList.map((li) => (
                         <a
@@ -49,6 +51,7 @@ const Footer: React.FC = () => {
                         </a>
                     ))}
                 </div>
+
                 <h1>© 2023 Created by DANBI CHOI</h1>
             </div>
         </div>

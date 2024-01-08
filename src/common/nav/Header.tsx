@@ -66,6 +66,7 @@ const Header: React.FC = () => {
                 >
                     <img src={logo} alt='logo' className='header__logo' />
                 </button>
+
                 <nav className='header__nav'>
                     {windowWidth < tabletWidth && (
                         <>
@@ -86,6 +87,7 @@ const Header: React.FC = () => {
                                     }
                                 />
                             </button>
+
                             {isMenuOpen && (
                                 <ul
                                     className='header__nav-overlay'

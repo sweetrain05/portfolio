@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-import { MdFileDownload } from 'react-icons/md';
 import { useLocation } from 'react-router-dom';
-import ExperienceCard from '../cards/ExperienceCard';
 import {
     experiencesCardData,
     projectsCardData,
 } from '../../common/AppConstants';
+import ExperienceCard, { experienceDataType } from '../cards/ExperienceCard';
+import ResumeDownload from '../sections/ResumeDownload';
 import useScrollToTop from '../../hooks/useScrollToTop';
 import './Experiences.scss';
 
@@ -34,26 +34,11 @@ const Experiences: React.FC = () => {
         <section className='experiences'>
             <h1 className='experiences__title section-title'>Experiences</h1>
 
-            <section className='experiences__resume'>
-                <p className='experiences__resume__text'>
-                    My formal resume is available here.
-                </p>
-                <a
-                    href='https://drive.google.com/file/d/1kcqQ2U5Zp6AXxuGQndwxAmy59qiz7q8d/view?usp=sharing'
-                    target='_blank'
-                    rel='noreferrer'
-                    className='experiences__resume__btn'
-                >
-                    <span className='btn'>
-                        <MdFileDownload />
-                        RESUME
-                    </span>
-                </a>
-            </section>
+            <ResumeDownload />
 
             <section>
-                {experiencesCardData.map((exp) => (
-                    <ExperienceCard data={exp} key={exp.title} />
+                {experiencesCardData.map((exp: experienceDataType) => (
+                    <ExperienceCard key={exp.title} data={exp} />
                 ))}
             </section>
 
@@ -62,7 +47,7 @@ const Experiences: React.FC = () => {
             </h1>
 
             <section>
-                {projectsCardData.map((proj) => (
+                {projectsCardData.map((proj: experienceDataType) => (
                     <ExperienceCard data={proj} key={proj.title} />
                 ))}
             </section>

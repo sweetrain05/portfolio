@@ -2,7 +2,7 @@ import {
     BsLinkedin,
     BsGithub,
     BsFillEnvelopeFill,
-    BsFileEarmarkTextFill,
+    BsJustifyLeft,
     BsBoxArrowUpRight,
     BsGeoAltFill,
 } from 'react-icons/bs';
@@ -74,7 +74,7 @@ export const highlightWorks = [
             'A dynamic mobile-responsive website featuring 35+ pages including admin panel with multiple privilege levels.',
         link: [
             {
-                icon: BsFileEarmarkTextFill,
+                icon: BsJustifyLeft,
                 to: '/experiences#ECommerceWebsite',
                 linkTitle: 'read more',
             },
@@ -92,13 +92,37 @@ export const highlightWorks = [
         image: youngLeeHanImg,
     },
     {
+        title: 'Web App.',
+        subtitle: 'My Portfolio Website',
+        description:
+            'A responsive web app crafted with TypeScript which achieved 95+ score in all Lighthouse evaluations.',
+        link: [
+            {
+                icon: BsJustifyLeft,
+                to: '/experiences#PortfolioWebsite',
+                linkTitle: 'read more',
+            },
+            {
+                icon: BsGithub,
+                to: 'https://github.com/sweetrain05/portfolio',
+                linkTitle: 'github',
+            },
+            {
+                icon: BsBoxArrowUpRight,
+                to: 'https://www.danbichoi.com',
+                linkTitle: 'demo',
+            },
+        ],
+        image: portfolioImg,
+    },
+    {
         title: 'Corporate Website',
         subtitle: 'Witness Creative Corp., U.S.',
         description:
             'A mobile-responsive website introducing the company and dynamically listing articles fetched from Medium blog using RESTful API.',
         link: [
             {
-                icon: BsFileEarmarkTextFill,
+                icon: BsJustifyLeft,
                 to: '/experiences#CorporateWebsite',
                 linkTitle: 'read more',
             },
@@ -114,30 +138,6 @@ export const highlightWorks = [
             },
         ],
         image: witnessPartnersImg,
-    },
-    {
-        title: 'Web App.',
-        subtitle: 'Weather and News by Zip Code',
-        description:
-            'A web app enabling users to search for local weather and related news articles by entering their zip code.',
-        link: [
-            {
-                icon: BsFileEarmarkTextFill,
-                to: '/experiences#WebApp.',
-                linkTitle: 'read more',
-            },
-            {
-                icon: BsGithub,
-                to: 'https://github.com/sweetrain05/zipcode-search',
-                linkTitle: 'github',
-            },
-            {
-                icon: BsBoxArrowUpRight,
-                to: 'https://zipcode-search-one.vercel.app/',
-                linkTitle: 'demo',
-            },
-        ],
-        image: weatherAppImg,
     },
 ];
 
