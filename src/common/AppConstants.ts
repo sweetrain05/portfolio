@@ -3,9 +3,9 @@ import {
     BsGithub,
     BsFillEnvelopeFill,
     BsJustifyLeft,
-    BsBoxArrowUpRight,
     BsGeoAltFill,
 } from 'react-icons/bs';
+import { LuExternalLink } from 'react-icons/lu';
 import { CgFigma } from 'react-icons/cg';
 import reactImg from '../assets/images/skills/react.svg';
 import reduxImg from '../assets/images/skills/redux.svg';
@@ -84,7 +84,7 @@ export const highlightWorks = [
                 linkTitle: 'github',
             },
             {
-                icon: BsBoxArrowUpRight,
+                icon: LuExternalLink,
                 to: 'https://youngleehan-client-private.vercel.app/',
                 linkTitle: 'demo',
             },
@@ -108,7 +108,7 @@ export const highlightWorks = [
                 linkTitle: 'github',
             },
             {
-                icon: BsBoxArrowUpRight,
+                icon: LuExternalLink,
                 to: 'https://www.danbichoi.com',
                 linkTitle: 'demo',
             },
@@ -132,7 +132,7 @@ export const highlightWorks = [
                 linkTitle: 'github',
             },
             {
-                icon: BsBoxArrowUpRight,
+                icon: LuExternalLink,
                 to: 'https://react-webiste-witness-creative-inc.vercel.app/',
                 linkTitle: 'demo',
             },
@@ -161,7 +161,7 @@ export const experiencesCardData = [
                 linkTitle: 'figma',
             },
             {
-                icon: BsBoxArrowUpRight,
+                icon: LuExternalLink,
                 to: 'https://youngleehan-client-private.vercel.app/',
                 linkTitle: 'demo',
             },
@@ -206,7 +206,7 @@ export const experiencesCardData = [
                 linkTitle: 'figma',
             },
             {
-                icon: BsBoxArrowUpRight,
+                icon: LuExternalLink,
                 to: 'https://react-webiste-witness-creative-inc.vercel.app/',
                 linkTitle: 'demo',
             },
@@ -257,7 +257,7 @@ export const projectsCardData = [
                 linkTitle: 'figma',
             },
             {
-                icon: BsBoxArrowUpRight,
+                icon: LuExternalLink,
                 to: 'https://www.danbichoi.com/',
                 linkTitle: 'demo',
             },
@@ -282,7 +282,7 @@ export const projectsCardData = [
                 linkTitle: 'github',
             },
             {
-                icon: BsBoxArrowUpRight,
+                icon: LuExternalLink,
                 to: 'https://zipcode-search-one.vercel.app/',
                 linkTitle: 'demo',
             },

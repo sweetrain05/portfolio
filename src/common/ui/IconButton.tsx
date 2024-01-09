@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import './IconButton.scss';
 
 type OwnProps = {
@@ -14,18 +14,6 @@ type IconButtonDataType = {
 
 const IconButton: React.FC<OwnProps> = ({ data, title }) => {
     const [isHovered, setIsHovered] = useState<boolean>(false);
-
-    useEffect(() => {
-        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-            setIsHovered(false);
-        };
-
-        window.addEventListener('beforeunload', handleBeforeUnload);
-
-        return () => {
-            window.removeEventListener('beforeunload', handleBeforeUnload);
-        };
-    }, []);
 
     const target = useMemo(() => {
         if (data.to && data.to[0] === '/') {
@@ -46,8 +34,6 @@ const IconButton: React.FC<OwnProps> = ({ data, title }) => {
             className='icon-button'
             onMouseOver={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            onTouchStart={() => setIsHovered(true)}
-            onTouchEnd={() => setIsHovered(false)}
             onClick={() => setIsHovered(false)}
         >
             <data.icon className='icon-button__icon' />

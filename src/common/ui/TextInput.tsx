@@ -15,7 +15,6 @@ type TextInputProps = {
     label?: string;
     className?: string;
     disabled?: boolean;
-    isIncludingErrorText?: boolean;
     errorText?: string;
     [key: string]: any;
 };
@@ -26,7 +25,6 @@ const TextInput: React.FC<TextInputProps> = ({
     label,
     className = '',
     disabled = false,
-    isIncludingErrorText = false,
     errorText,
     ...rest
 }) => {
@@ -35,23 +33,11 @@ const TextInput: React.FC<TextInputProps> = ({
             classNames(
                 'text-input',
                 {
-                    'text-input--include-error': isIncludingErrorText,
+                    'text-input--include-error': errorText,
                 },
                 className
             ),
-        [isIncludingErrorText, className]
-    );
-
-    const inputIconClasses = useMemo(
-        () =>
-            classNames(
-                'text-input__icon',
-                { 'text-input__icon--error': errorText },
-                {
-                    'text-input__icon--disabled': disabled,
-                }
-            ),
-        [errorText, disabled]
+        [errorText, className]
     );
 
     const inputFieldClasses = useMemo(
@@ -83,6 +69,8 @@ const TextInput: React.FC<TextInputProps> = ({
 
             {type === TextInputType.TEXTAREA ? (
                 <textarea
+                    id={label}
+                    name={label}
                     className={inputFieldClasses}
                     disabled={disabled}
                     {...rest}
@@ -99,7 +87,7 @@ const TextInput: React.FC<TextInputProps> = ({
             )}
 
             {errorText && (
-                <span className='text-input__error-text'>{errorText}</span>
+                <div className='text-input__error-text'>{errorText}</div>
             )}
         </div>
     );

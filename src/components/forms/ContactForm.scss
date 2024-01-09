@@ -1,0 +1,40 @@
+@import '~/src/assets/styles/colors';
+@import '~/src/assets/styles/vars';
+@import '~/src/index.scss';
+
+.contact {
+    &__form {
+        width: 100%;
+
+        &__subtitle {
+            margin: 2.625rem 0 2.063rem 0;
+        }
+
+        &__input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.438rem;
+
+            &__error {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                align-items: center;
+                padding: 1rem;
+                color: $error;
+                background-color: rgba($error, 0.2);
+            }
+
+            &__btn {
+                padding: 1rem 0;
+                max-width: 100px;
+
+                span {
+                    font-weight: 500;
+                    color: $white;
+                    background: $pink-gradation;
+                }
+            }
+        }
+    }
+}
