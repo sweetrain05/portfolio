@@ -26,6 +26,10 @@
             flex-direction: row;
         }
 
+        &:hover &__img {
+            transform: scale(1.3);
+        }
+
         &__img-box {
             width: 100%;
             max-width: 100%;
@@ -34,8 +38,8 @@
             border-radius: 15px 15px 0 0;
             margin-right: 2rem;
             padding: 0.3rem;
-
             transition: max-width 0.5s ease-in-out, max-height 0.5s ease-in-out;
+            overflow: hidden;
 
             @include tablet__desktop {
                 min-width: 350px;
@@ -49,6 +53,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 10px 10px 0 0;
+            transition: transform 0.8s ease;
 
             @include tablet__desktop {
                 border-radius: 10px 0 0 0;

@@ -52,7 +52,11 @@ const Footer: React.FC = () => {
                     ))}
                 </div>
 
-                <h1>© 2023 Created by DANBI CHOI</h1>
+                <h1 className='footer__rights'>
+                    © 2023 Created by DANBI CHOI
+                    <br />
+                    All rights reserved.
+                </h1>
             </div>
         </div>
     );

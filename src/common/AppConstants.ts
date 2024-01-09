@@ -262,7 +262,7 @@ export const projectsCardData = [
                 linkTitle: 'demo',
             },
         ],
-        frontend: ['TypeScript', 'React', 'HTML5', 'SASS', 'Figma'],
+        frontend: ['TypeScript', 'React', 'HTML5', 'SASS', 'AJAX', 'Figma'],
         explanation: [
             'Achieved high-performance benchmarks, with scores exceeding 95 in Lighthouse evaluations across performance, accessibility, best practices, and SEO.',
             'Designed and engineered a mobile-responsive, four-page website using TypeScript and React emphasizing accessibility to ensure a seamless UX across various devices.',

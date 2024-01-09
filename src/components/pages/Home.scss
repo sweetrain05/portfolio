@@ -88,6 +88,13 @@
         align-items: center;
         margin-bottom: 5.75rem;
 
+        &:hover &__btn {
+            span {
+                background: $pink-gradation;
+                color: $white;
+            }
+        }
+
         &__title {
             color: $white;
             font-weight: 600;
@@ -106,7 +113,7 @@
             span {
                 background-color: $white;
                 color: $dark-green;
-                transition: all 0.3s ease-in-out;
+                transition: all 0.2s ease-in;
             }
 
             &:hover {
