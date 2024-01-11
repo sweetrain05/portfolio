@@ -18,6 +18,8 @@ import bootstrapImg from '../assets/images/skills/bootstrap.svg';
 import antDesignImg from '../assets/images/skills/antDesign.svg';
 import figmaImg from '../assets/images/skills/figma.svg';
 import eslintImg from '../assets/images/skills/eslint.svg';
+import tailwindImg from '../assets/images/skills/tailwindCSS.svg';
+import tanstackQueryImg from '../assets/images/skills/tanstackQuery.svg';
 import nodeImg from '../assets/images/skills/node.svg';
 import expressImg from '../assets/images/skills/express.svg';
 import mongodbImg from '../assets/images/skills/mongodb.svg';
@@ -232,7 +234,7 @@ export const experiencesCardData = [
         subtitle: 'LG Hausys, Ltd., Seoul, South Korea | 2014 - 2018',
         image: lgLogo,
         explanation: [
-            'Demonstrated strong product management skills by setting and executing specific bi-weekly action plans and facilitating smooth collaborations.',
+            'Demonstrated strong product management skills by setting and executing specific bi-weekly action plans and facilitating smooth collaborations with diverse teams, including engineers, designers, and sales professionals.',
             'Created wireframes for various marketing materials, such as product preview websites, sample books, brochures, and product application guides.',
         ],
     },
@@ -329,6 +331,8 @@ export const skillList = [
             { name: 'HTML5', image: htmlImg },
             { name: 'Bootstrap', image: bootstrapImg },
             { name: 'Ant Design', image: antDesignImg },
+            { name: 'Tailwind CSS', image: tailwindImg },
+            { name: 'Tanstack Query', image: tanstackQueryImg },
             { name: 'Figma', image: figmaImg },
             { name: 'Eslint', image: eslintImg },
         ],
