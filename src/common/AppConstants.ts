@@ -94,8 +94,8 @@ export const highlightWorks = [
         image: youngLeeHanImg,
     },
     {
-        title: 'Web App.',
-        subtitle: 'My Portfolio Website',
+        title: 'Portfolio Website',
+        subtitle: 'My Portfolio',
         description:
             'A responsive web app coded with TypeScript achieving a score above 95 in all Lighthouse evaluations.',
         link: [
@@ -243,7 +243,7 @@ export const experiencesCardData = [
 export const projectsCardData = [
     {
         title: 'Portfolio Website',
-        subtitle: 'My portfolio website | Nov. 2023',
+        subtitle: 'My portfolio | Nov. 2023',
         image: portfolioImg,
         description:
             'Crafted a sophisticated online portfolio to exhibit my latest projects and skills, presenting a comprehensive overview of my professional capabilities.',

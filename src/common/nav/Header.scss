@@ -112,23 +112,31 @@
         background-color: $gray;
         border-radius: 20px;
         list-style: none;
-        padding: 0 1rem;
+        padding: 1rem;
         width: 40%;
 
-        li {
-            background-color: transparent;
-        }
-
-        &__li {
+        &__btn {
             width: 100%;
             text-align: start;
             padding: 0.5rem 0;
             margin: 0.4rem 0;
             color: $text-gray;
             font-weight: 500;
+            position: relative;
 
             &:hover {
                 color: $bright-green;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $bright-green;
+                    border-radius: 50%;
+                    margin: 0 0 5px 5px;
+                    animation: bounce 0.5s ease infinite;
+                }
             }
         }
     }
@@ -140,10 +148,6 @@
         align-items: center;
         list-style: none;
         background-color: transparent;
-
-        li {
-            background-color: transparent;
-        }
 
         &__btn {
             position: relative;
@@ -200,5 +204,9 @@
                 animation: shake 0.5s ease infinite;
             }
         }
+    }
+
+    &__selected {
+        color: $bright-green;
     }
 }

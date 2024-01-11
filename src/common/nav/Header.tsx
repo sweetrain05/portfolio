@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import HeaderNavButtons from './HeaderNavButtons';
 import logo from '../../assets/images/logo.svg';
 import { tabletWidth, navList } from '../AppConstants';
 import useWindowWidth from '../../hooks/useWindowWidth';
@@ -89,50 +90,42 @@ const Header: React.FC = () => {
                             </button>
 
                             {isMenuOpen && (
-                                <ul
+                                <div
                                     className='header__nav-overlay'
                                     ref={navOverlayRef}
                                 >
                                     {navList.map((li) => (
-                                        <li key={li.title}>
-                                            <button
-                                                className='header__nav-overlay__li'
-                                                onClick={() =>
-                                                    handleNavClick(li.title)
-                                                }
-                                            >
-                                                {li.title.toUpperCase()}
-                                            </button>
-                                        </li>
+                                        <HeaderNavButtons
+                                            key={li.title}
+                                            theme='nav-overlay'
+                                            title={li.title}
+                                            handleNavClick={handleNavClick}
+                                        />
                                     ))}
-                                </ul>
+                                </div>
                             )}
                         </>
                     )}
 
                     {windowWidth > tabletWidth && (
-                        <ul className='header__nav-list'>
+                        <div className='header__nav-list'>
                             {navList.slice(0, -1).map((li) => (
-                                <li key={li.title}>
-                                    <button
-                                        className='header__nav-list__btn'
-                                        onClick={() => handleNavClick(li.title)}
-                                    >
-                                        {li.title.toUpperCase()}
-                                    </button>
-                                </li>
+                                <HeaderNavButtons
+                                    key={li.title}
+                                    title={li.title}
+                                    handleNavClick={handleNavClick}
+                                />
                             ))}
-                            <li>
-                                <button
-                                    onClick={() => handleNavClick('contact')}
-                                    className='header__nav-list__btn-highlight'
-                                >
-                                    <span className='btn'>
-                                        {`Let's talk`.toUpperCase()}
-                                    </span>
-                                </button>
-                            </li>
-                        </ul>
+
+                            <button
+                                onClick={() => handleNavClick('contact')}
+                                className='header__nav-list__btn-highlight'
+                            >
+                                <span className='btn'>
+                                    {`Let's talk`.toUpperCase()}
+                                </span>
+                            </button>
+                        </div>
                     )}
                 </nav>
             </div>
