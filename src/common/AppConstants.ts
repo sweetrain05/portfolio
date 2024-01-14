@@ -87,7 +87,7 @@ export const highlightWorks = [
             },
             {
                 icon: LuExternalLink,
-                to: 'https://youngleehan-client-private.vercel.app/',
+                to: 'https://youngleehankorean.com/',
                 linkTitle: 'demo',
             },
         ],
@@ -164,7 +164,7 @@ export const experiencesCardData = [
             },
             {
                 icon: LuExternalLink,
-                to: 'https://youngleehan-client-private.vercel.app/',
+                to: 'https://youngleehankorean.com/',
                 linkTitle: 'demo',
             },
         ],
