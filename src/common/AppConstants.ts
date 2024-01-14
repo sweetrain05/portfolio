@@ -92,7 +92,7 @@ export const highlightWorks = [
             },
         ],
         image: youngLeeHanImg,
-        skills: ['React'],
+        skills: ['React', 'NodeJS'],
     },
     {
         title: 'Portfolio Website',
