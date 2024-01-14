@@ -28,6 +28,10 @@
                     box-shadow: rgba($dark-green, 0.5) 0px 3px 8px;
                 }
             }
+
+            &:hover &__icon {
+                animation: bounce 0.5s ease infinite;
+            }
         }
     }
 }

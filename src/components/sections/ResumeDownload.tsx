@@ -15,7 +15,7 @@ const ResumeDownload: React.FC = () => {
             >
                 <div className='experiences__resume__btn'>
                     <span className='btn'>
-                        <MdFileDownload />
+                        <MdFileDownload className='experiences__resume__btn__icon' />
                         RESUME
                     </span>
                 </div>
