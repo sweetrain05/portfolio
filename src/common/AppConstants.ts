@@ -92,6 +92,7 @@ export const highlightWorks = [
             },
         ],
         image: youngLeeHanImg,
+        skills: ['React'],
     },
     {
         title: 'Portfolio Website',
@@ -116,6 +117,7 @@ export const highlightWorks = [
             },
         ],
         image: portfolioImg,
+        skills: ['TypeScript', 'React'],
     },
     {
         title: 'Corporate Website',
@@ -140,6 +142,7 @@ export const highlightWorks = [
             },
         ],
         image: witnessPartnersImg,
+        skills: ['React'],
     },
 ];
 

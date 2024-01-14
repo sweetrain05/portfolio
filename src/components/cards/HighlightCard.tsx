@@ -11,6 +11,7 @@ export type highlightDataType = {
     description: string;
     link: linkDataType[];
     image: string;
+    skills: string[];
 };
 
 export type linkDataType = {
@@ -20,7 +21,7 @@ export type linkDataType = {
 };
 
 const HighlightCard: React.FC<OwnProps> = ({ data }) => {
-    const { title, subtitle, description, link, image } = data;
+    const { title, subtitle, description, link, image, skills } = data;
 
     return (
         <article className='home__highlight__card'>
@@ -36,6 +37,16 @@ const HighlightCard: React.FC<OwnProps> = ({ data }) => {
                 </a>
 
                 <div className='home__highlight__card__desc'>
+                    <div className='home__highlight__card__skillTab-box'>
+                        {skills.map((skill) => (
+                            <span
+                                key={skill}
+                                className='home__highlight__card__skillTab'
+                            >
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
                     <h1 className='home__highlight__card__title'>{title}</h1>
 
                     <h2 className='home__highlight__card__subtitle'>
