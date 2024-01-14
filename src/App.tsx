@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Experiences from './components/pages/Experiences';
 import Skills from './components/pages/Skills';
 import Contact from './components/pages/Contact';
+import PageNotFound from './components/pages/PageNotFound';
 import './App.scss';
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
                     <Route path='/experiences' element={<Experiences />} />
                     <Route path='/skills' element={<Skills />} />
                     <Route path='/contact' element={<Contact />} />
+                    <Route path='*' element={<PageNotFound />} />
                 </Routes>
             </main>
             <Footer />
