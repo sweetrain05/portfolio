@@ -157,7 +157,7 @@ export const experiencesCardData = [
         link: [
             {
                 icon: BsGithub,
-                to: 'https://github.com/YoungLeeHan/YoungleehanKorean',
+                to: 'https://github.com/sweetrain05/YoungleehanKorean',
                 linkTitle: 'github',
             },
             {
@@ -237,8 +237,10 @@ export const experiencesCardData = [
         subtitle: 'LG Hausys, Ltd., Seoul, South Korea | 2014 - 2018',
         image: lgLogo,
         explanation: [
-            'Demonstrated strong product management skills by setting and executing specific bi-weekly action plans and facilitating smooth collaborations with diverse teams, including engineers, designers, and sales professionals.',
-            'Created wireframes for various marketing materials, such as product preview websites, sample books, brochures, and product application guides.',
+            'Championed strategic project management, setting and executing bi-weekly action plans, and fostering smooth collaboration across diverse teams, including engineers, designers, and sales departments.',
+            'Designed wireframes and developed marketing materials, such as product websites, sample books, brochures, product application guides, and conference booths contributing to the successful launch of 2-3 new products annually, tailored for both global and local markets.',
+            'Partnered with global sales teams on B2B product development, ensuring that offerings were aligned with market demands and environmental standards.',
+            'Managed online product updates, sustainability reports, and corporate communications, ensuring brand consistency and market relevance.',
         ],
     },
 ];
