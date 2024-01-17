@@ -27,7 +27,6 @@ const IconButton: React.FC<OwnProps> = ({ data, title }) => {
         <a
             href={data.to}
             target={target}
-            rel='noreferrer'
             aria-label={`Open ${
                 target === '_blank' ? 'new tab' : 'link'
             } to ${title}'s ${data.linkTitle}`}
