@@ -38,6 +38,7 @@ import witnessPartnersImg from '../assets/images/projects/Corp Website.png';
 import weatherAppImg from '../assets/images/projects/Weather Web App.png';
 import lgLogo from '../assets/images/projects/LGHausys_logo.png';
 import portfolioImg from '../assets/images/projects/Portfolio.png';
+import buttonPlaygroundImg from '../assets/images/projects/buttonPlayground.png';
 
 export const mobileWidth = 480;
 export const tabletWidth = 767;
@@ -269,7 +270,15 @@ export const projectsCardData = [
                 linkTitle: 'demo',
             },
         ],
-        frontend: ['TypeScript', 'React', 'HTML5', 'SASS', 'AJAX', 'Figma'],
+        frontend: [
+            'TypeScript',
+            'React',
+            'HTML5',
+            'SASS',
+            'AJAX',
+            'Figma',
+            'Accessibility',
+        ],
         explanation: [
             'Achieved high-performance benchmarks, with scores exceeding 95 in Lighthouse evaluations across performance, accessibility, best practices, and SEO.',
             'Designed and engineered a mobile-responsive, four-page website using TypeScript and React emphasizing accessibility to ensure a seamless UX across various devices.',
@@ -304,6 +313,29 @@ export const projectsCardData = [
         ],
         explanation: [
             'Incorporated chaining HTTP requests to four different public APIs(Rapid APIs, NewsCatcher), utilizing user-entered zip code to extract location details, which was chained to fetch real-time information on weather, time of the day, and local news.',
+        ],
+    },
+    {
+        title: 'Web App.',
+        subtitle: 'Button Playground | Oct. 2022',
+        image: buttonPlaygroundImg,
+        description:
+            'Built a site enabling users to easily design a custom button and get code snippet instantly.',
+        link: [
+            {
+                icon: BsGithub,
+                to: 'https://github.com/sweetrain05/button_playground',
+                linkTitle: 'github',
+            },
+            {
+                icon: LuExternalLink,
+                to: 'https://sweetrain05.github.io/button_playground/',
+                linkTitle: 'demo',
+            },
+        ],
+        frontend: ['JavaScript ES6', 'HTML5', 'CSS3'],
+        explanation: [
+            'Created an interactive, mobile-responsive web app using core front-end technologies.',
         ],
     },
 ];
