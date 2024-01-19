@@ -9,6 +9,10 @@ type OwnProps = {
 };
 
 const ExperienceList: React.FC<OwnProps> = ({ data, title }) => {
+    const createMarkup = (htmlContent: string) => {
+        return { __html: htmlContent };
+    };
+
     const ulStyleClasses = useMemo(
         () =>
             classNames(
@@ -47,9 +51,11 @@ const ExperienceList: React.FC<OwnProps> = ({ data, title }) => {
             </div>
             <ul className={ulStyleClasses}>
                 {data.map((li: string) => (
-                    <li key={li} className={liStyleClasses}>
-                        {li}
-                    </li>
+                    <li
+                        key={li}
+                        className={liStyleClasses}
+                        dangerouslySetInnerHTML={createMarkup(li)}
+                    ></li>
                 ))}
             </ul>
         </div>

@@ -76,6 +76,12 @@
             font-size: $m-fs-h4;
             font-weight: 300;
             color: $text-gray;
+
+            span {
+                font-size: $m-fs-h4;
+                color: $text-gray;
+                font-weight: 500;
+            }
         }
 
         &__link-box {

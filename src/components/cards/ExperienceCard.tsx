@@ -52,6 +52,10 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
         }
     }, [demoLink]);
 
+    const createMarkup = (htmlContent: string) => {
+        return { __html: htmlContent };
+    };
+
     return (
         <article className='experience-card' id={title.replace(/\s+/g, '')}>
             {jobTitle && (
@@ -79,9 +83,11 @@ const ExperienceCard: React.FC<OwnProps> = ({ data }) => {
                     <h1 className='experience-card__top-container__subtitle'>
                         {subtitle}
                     </h1>
-                    <p className='experience-card__top-container__description'>
-                        {description}
-                    </p>
+
+                    <p
+                        className='experience-card__top-container__description'
+                        dangerouslySetInnerHTML={createMarkup(description)}
+                    ></p>
 
                     {link.length > 0 && (
                         <div className='experience-card__top-container__link-box'>

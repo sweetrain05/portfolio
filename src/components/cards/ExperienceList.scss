@@ -57,6 +57,23 @@
             font-weight: 300;
             color: $text-gray;
             padding-bottom: 1rem;
+
+            span {
+                font-size: $m-fs-h4;
+                color: $text-gray;
+                font-weight: 500;
+            }
+
+            span.explanation-link {
+                font-size: $m-fs-h5;
+                font-weight: 400;
+                color: $bright-green;
+                text-decoration: underline;
+
+                &:hover {
+                    color: $pink;
+                }
+            }
         }
     }
 }

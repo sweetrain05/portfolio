@@ -31,6 +31,18 @@ const LandingView: React.FC = () => {
                             </>
                         )}
                         Front-end Developer
+                        {windowWidth > mobileWidth ? (
+                            <>
+                                {' '}
+                                <span>|</span>{' '}
+                            </>
+                        ) : (
+                            <>
+                                <br />
+                                <span>&</span>{' '}
+                            </>
+                        )}
+                        Product Manager
                     </h2>
                     <br />
                     Expertised in <span>
@@ -42,9 +54,11 @@ const LandingView: React.FC = () => {
                     accessible interfaces.
                     <br />
                     <br />
-                    Besides web development, I’m passionate about funny cat
-                    memes, trying out new recipes, and basically everything
-                    related to creating something beautiful and yummy.
+                    With{' '}
+                    <span>5 years of experience as a Product Manager </span>
+                    and programming knowledge, I excel in bridging technical
+                    solutions with business strategies, focusing on optimal user
+                    experiences from initial concept to launch.
                 </div>
             </div>
 
