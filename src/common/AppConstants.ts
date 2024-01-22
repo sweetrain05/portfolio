@@ -25,6 +25,7 @@ import expressImg from "../assets/images/skills/express.svg";
 import mongodbImg from "../assets/images/skills/mongodb.svg";
 import mysqlImg from "../assets/images/skills/mysql.svg";
 import postmanImg from "../assets/images/skills/postman.svg";
+import swaggerImg from "../assets/images/skills/swagger.svg";
 import restapiImg from "../assets/images/skills/restapi.svg";
 import jiraImg from "../assets/images/skills/jira.svg";
 import confluenceImg from "../assets/images/skills/confluence.svg";
@@ -200,7 +201,7 @@ export const experiencesCardData = [
             "Developed a personal business website that supports e-commerce and content management using <span>React, NodeJS, and Express</span>.",
             "Integrated <span>Braintree</span> for payment, <span>JWT token</span> for authentication, and <span>React-quill</span> as text editor.",
             "Designed role-based user access and developed an <span>admin page</span> for product management.",
-            "Initiated and adopted <span>Swagger documentation</span> and designed <span>ERD</span> to make communication efficient and clear and to ensure API integrity and cohesiveness.",
+            "Constructed <span>ERD</span> and adopted <span>Swagger documentation</span> to make communication efficient and clear.",
             "Created a <span>mobile-responsive</span>, <span>pixel-perfect</span> design that aligns with the <span>Figma</span> design.",
         ],
     },
@@ -223,7 +224,7 @@ export const experiencesCardData = [
         ],
         explanation: [
             "Lead the front-end development of the project using <span>TypeScript, React, Redux, and BEM methodology</span>, ensuring user-oriented solutions.",
-            "Created multiple <span>generic React components</span> and integrated them into service.",
+            "Created <span>generic React components</span> and integrated them into service.",
             "Collaborated  with an <span>8-member team</span>, including an architect, back-end developers, a designer, a product manager, and a scrum master, aiming at the <span>commercial launch</span> and sales of the application.",
             "Employed <span>Agile methodologies</span>, managing tasks through a <span>strict Jira ticket system</span>.",
         ],
@@ -405,12 +406,12 @@ export const skillList = [
             { name: "Redux", image: reduxImg },
             { name: "JavaScript", image: jsImg },
             { name: "TypeScript", image: tsImg },
-            { name: "SCSS", image: scssImg },
-            { name: "CSS3", image: cssImg },
             { name: "HTML5", image: htmlImg },
+            { name: "CSS3", image: cssImg },
+            { name: "SCSS", image: scssImg },
+            { name: "Tailwind CSS", image: tailwindImg },
             { name: "Bootstrap", image: bootstrapImg },
             { name: "Ant Design", image: antDesignImg },
-            { name: "Tailwind CSS", image: tailwindImg },
             { name: "Tanstack Query", image: tanstackQueryImg },
             { name: "Figma", image: figmaImg },
             { name: "Eslint", image: eslintImg },
@@ -424,6 +425,7 @@ export const skillList = [
             { name: "MongoDB", image: mongodbImg },
             { name: "MySQL", image: mysqlImg },
             { name: "Postman", image: postmanImg },
+            { name: "Swagger", image: swaggerImg },
             { name: "REST API", image: restapiImg },
         ],
     },
