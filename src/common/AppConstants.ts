@@ -72,10 +72,10 @@ export const extLinkList = [
 
 export const highlightWorks = [
     {
-        title: "ECommerce Website",
+        title: "ECommerce Web App.",
         subtitle: "YoungLeeHan Korean, U.S.",
         description:
-            "A dynamic mobile-responsive website featuring 35+ pages including admin panel with multiple privilege levels.",
+            "A dynamic mobile-responsive web app created using MERN stack.",
         link: [
             {
                 icon: BsJustifyLeft,
@@ -100,7 +100,7 @@ export const highlightWorks = [
         title: "Portfolio Website",
         subtitle: "My Portfolio",
         description:
-            "A responsive web app coded with TypeScript achieving a score above 95 in all Lighthouse evaluations.",
+            "A responsive website coded with TypeScript achieving a score above 95 in all Lighthouse evaluations.",
         link: [
             {
                 icon: BsJustifyLeft,
@@ -151,11 +151,11 @@ export const highlightWorks = [
 export const experiencesCardData = [
     {
         jobTitle: "Full-stack Developer",
-        title: "ECommerce Website",
-        subtitle: "YoungLeeHan Korean, U.S. | May 2023 - present",
+        title: "ECommerce Web App.",
+        subtitle: "YoungLeeHan Korean, U.S. | Jan. 2023 - present",
         image: youngLeeHanImg,
         description:
-            "Developed a dynamic e-commerce website featuring <span>35+ page routes</span>. The website offers K-culture blog and a platform for selling learning materials. It also provides an <span>Admin Panel</span> enabling admin to manage products, product categories, and blog posts on the website.",
+            "Developed a dynamic e-commerce website that offers K-culture blog and a platform for selling learning materials.",
         link: [
             {
                 icon: BsGithub,
@@ -176,37 +176,45 @@ export const experiencesCardData = [
         frontend: [
             "React",
             "JavaScript ES6",
-            "Hooks",
-            "Context",
             "HTML5",
             "SASS",
-            "AJAX",
-            "REST API",
             "Bootstrap",
             "Ant Design",
+            "AJAX",
+            "REST API",
             "Figma",
             "Responsive Design",
         ],
-        backend: ["Node.js", "Express.js", "MongoDB", "REST API", "Postman"],
+        backend: [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "ERD",
+            "REST API",
+            "Braintree",
+            "JWT",
+            "Postman",
+            "Swagger",
+        ],
         explanation: [
-            'Developed <span>95% of front-end code</span> <a href="https://github.com/YoungLeeHan/YoungleehanKorean/graphs/contributors" target="_blank" aria-label="Open link to see data"><span class="explanation-link">[View Data]</span></a>, establishing connections with the back-end using <span>50 REST APIs</span>.',
-            "Architected and developed <span>30+ reusable react component</span> collaborating with <span>4 other software engineers</span>.",
-            "On back-end, <span>designed database schema, 6 API endpoints, and CRUD controllers</span> for blog and user profile pages.",
-            "Delivered <span>MVP in 8 weeks</span> using <span>weekly sprints</span> and <span>Jira</span> for efficient schedule management.",
+            "Developed a personal business website that supports e-commerce and content management using <span>React, NodeJS, and Express</span>.",
+            "Integrated <span>Braintree</span> for payment, <span>JWT token</span> for authentication, and <span>React-quill</span> as text editor.",
+            "Designed role-based user access and developed an <span>admin page</span> for product management.",
+            "Initiated and adopted <span>Swagger documentation</span> and designed <span>ERD</span> to make communication efficient and clear and to ensure API integrity and cohesiveness.",
+            "Created a <span>mobile-responsive</span>, <span>pixel-perfect</span> design that aligns with the <span>Figma</span> design.",
         ],
     },
     {
         jobTitle: "Front-end Developer",
         title: "Web App.",
-        subtitle: "HR Solutions | Sept. 2023 - present",
+        subtitle: "HR Solutions | July 2023 - present",
         image: hrSolutionImg,
         description:
-            "An HR solution web application tailored for small businesses, enhancing PTO and part-time employee management. The platform offers advanced tools with a user-friendly interface, streamlining HR tasks and elevating operational efficiency.",
+            "An HR solution web application tailored for small businesses, enhancing PTO and part-time employee management.",
         frontend: [
             "TypeScript",
             "React",
             "Redux",
-            "Hooks",
             "HTML5",
             "SASS",
             "AJAX",
@@ -214,9 +222,10 @@ export const experiencesCardData = [
             "Figma",
         ],
         explanation: [
-            "Collaborating with an <span>8-member team</span>, including an architect, back-end developers, a designer, a product manager, and a scrum master, aiming on the <span>commercial launch and sales</span> of the application.",
-            "Lead the front-end development of the project using <span>TypeScript, React, Redux, and BEM methodology</span>, ensuring robust and scalable solutions.",
-            "Employ <span>Agile</span> methodologies, managing tasks through a <span>strict Jira ticket system</span> under the guidance of a professional scrum master, consistently delivering on <span>40-point velocity targets in bi-weekly sprints</span>.",
+            "Lead the front-end development of the project using <span>TypeScript, React, Redux, and BEM methodology</span>, ensuring user-oriented solutions.",
+            "Created multiple <span>generic React components</span> and integrated them into service.",
+            "Collaborated  with an <span>8-member team</span>, including an architect, back-end developers, a designer, a product manager, and a scrum master, aiming at the <span>commercial launch</span> and sales of the application.",
+            "Employed <span>Agile methodologies</span>, managing tasks through a <span>strict Jira ticket system</span>.",
         ],
     },
     {
@@ -254,10 +263,12 @@ export const experiencesCardData = [
             "Responsive Design",
         ],
         explanation: [
-            "Developed through <span>end-to-end lifecycle</span>, from Figma design to deployment.",
-            "Implemented <span>HTTP requests using RapidAPI</span> to retrieve user articles from their Medium blog.",
-            "Integrated third-party components, including <span>Mailchimp, Formspree and Google Domain</span>.",
-            'Developed the same page using <span>vanilla JavaScript and Webpack</span>. <a href="https://website-witness-partners-5j0cafjij-sweetrain05.vercel.app/" target="_blank" aria-label="Open Link"><span class="explanation-link">[View Demo]</span></a>',
+            "Built a <span>mobile-responsive</span> website for a client from scratch.",
+            "Integrated <span>RapidAPI</span> to retrieve user articles from their <span>Medium blog</span>.",
+            "Integrated <span>Mailchimp</span> for e-mail subscription and <span>Formspree</span> for contact page.",
+            "Deployed the website to <span>Vercel</span> and established a connection to <span>Google domain</span>.",
+            "Managed <span>end-to-end development lifecycle</span>, from Figma design to deployment.",
+            'Developed the same page using <span>vanilla JavaScript and Webpack</span>. <a href="https://website-witness-partners-5j0cafjij-sweetrain05.vercel.app/" target="_blank" aria-label="Open Link to view demo"><span class="explanation-link">[View Demo]</span></a>',
         ],
     },
     {
@@ -266,7 +277,7 @@ export const experiencesCardData = [
         subtitle: "LG Hausys, Ltd., Seoul, South Korea | 2014 - 2018",
         image: lgLogo,
         explanation: [
-            "Championed strategic product management, setting and executing bi-weekly <span>action plans</span>, and fostering smooth <span>collaboration across diverse teams</span>, including engineers, designers, and sales departments.",
+            "Demonstrated strategic product management, setting and executing bi-weekly <span>action plans</span>, and fostering smooth <span>collaboration across diverse teams</span>, including engineers, designers, and sales departments.",
             "<span>Designed wireframes and developed marketing materials</span>, such as product websites, sample books, brochures, product application guides, and conference booths contributing to the successful launch of 2-3 new products annually, tailored for both global and local markets.",
             "<span>Partnered with global sales teams on B2B product development</span>, ensuring that offerings were aligned with market demands and environmental standards.",
             "Managed online product updates, sustainability reports, and corporate communications, ensuring brand consistency and market relevance.",
@@ -301,6 +312,7 @@ export const projectsCardData = [
         frontend: [
             "TypeScript",
             "React",
+            "Hooks",
             "HTML5",
             "SASS",
             "AJAX",
