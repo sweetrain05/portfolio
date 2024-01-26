@@ -1,6 +1,6 @@
-@import '~/src/assets/styles/colors';
-@import '~/src/assets/styles/vars';
-@import '~/src/index.scss';
+@import "~/src/assets/styles/colors";
+@import "~/src/assets/styles/vars";
+@import "~/src/index.scss";
 
 .skills__skills-container {
     &__img-box {
@@ -11,7 +11,6 @@
         justify-content: center;
         align-items: center;
         transition: all 0.5s ease-in;
-        cursor: pointer;
 
         &__img {
             width: 60px;
