@@ -25,6 +25,7 @@ const HeaderNavButtons: React.FC<OwnProps> = ({
             key={title}
             className={`header__${theme}__btn ${btnClassName}`}
             onClick={() => handleNavClick(title)}
+            data-cy={`header-btn-${title}`}
         >
             {title.toUpperCase()}
         </button>

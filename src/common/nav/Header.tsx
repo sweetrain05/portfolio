@@ -64,6 +64,7 @@ const Header: React.FC = () => {
                 <button
                     onClick={() => handleNavClick('home')}
                     className='header__btn'
+                    data-cy='header-btn-logo'
                 >
                     <img src={logo} alt='logo' className='header__logo' />
                 </button>
@@ -78,6 +79,7 @@ const Header: React.FC = () => {
                                     e.stopPropagation();
                                     setIsMenuOpen((curr) => !curr);
                                 }}
+                                data-cy='header-btn-open-overlay'
                             >
                                 <p className='header__nav-btn__text'>Menu</p>
                                 <MdKeyboardArrowDown
@@ -93,6 +95,7 @@ const Header: React.FC = () => {
                                 <div
                                     className='header__nav-overlay'
                                     ref={navOverlayRef}
+                                    data-cy='header-nav-overlay'
                                 >
                                     {navList.map((li) => (
                                         <HeaderNavButtons
@@ -108,7 +111,10 @@ const Header: React.FC = () => {
                     )}
 
                     {windowWidth > tabletWidth && (
-                        <div className='header__nav-list'>
+                        <div
+                            className='header__nav-list'
+                            data-cy='header-nav-list-desktop'
+                        >
                             {navList.slice(0, -1).map((li) => (
                                 <HeaderNavButtons
                                     key={li.title}
@@ -120,6 +126,7 @@ const Header: React.FC = () => {
                             <button
                                 onClick={() => handleNavClick('contact')}
                                 className='header__nav-list__btn-highlight'
+                                data-cy='header-btn-contact'
                             >
                                 <span className='btn'>
                                     {`Let's talk`.toUpperCase()}
