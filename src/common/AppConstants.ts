@@ -37,6 +37,7 @@ import vercelImg from '../assets/images/skills/vercel.svg';
 import vscodeImg from '../assets/images/skills/vscode.svg';
 import youngLeeHanImg from '../assets/images/projects/YoungLeeHan Ecommerce.png';
 import witnessPartnersImg from '../assets/images/projects/Corp Website.png';
+import padForwardImg from '../assets/images/projects/blackwingshack-padForward1.png';
 import weatherAppImg from '../assets/images/projects/Weather Web App.png';
 import lgLogo from '../assets/images/projects/LGHausys_logo.png';
 import portfolioImg from '../assets/images/projects/Portfolio.png';
@@ -77,7 +78,7 @@ export const highlightWorks = [
         title: 'ECommerce Web App.',
         subtitle: 'YoungLeeHan Korean, U.S.',
         description:
-            'A dynamic mobile-responsive web app created using MERN stack.',
+            'A dynamic commercial-level web app created using MERN stack.',
         link: [
             {
                 icon: BsJustifyLeft,
@@ -152,9 +153,33 @@ export const highlightWorks = [
 
 export const experiencesCardData = [
     {
+        jobTitle: 'Frontend Engineer',
+        title: 'Web App.',
+        subtitle: 'HR Solutions | July 2023 - present',
+        image: hrSolutionImg,
+        description:
+            'A HR solution web application tailored for small businesses, enhancing PTO and part-time employee management.',
+        frontend: [
+            'TypeScript',
+            'React',
+            'Redux',
+            'HTML5',
+            'SASS',
+            'AJAX',
+            'REST API',
+            'Figma',
+        ],
+        explanation: [
+            'Led front-end development of the project using <span>TypeScript, React, Redux, and BEM methodology</span>.',
+            'Developed common <span>UI component libraries</span> and integrated them into the service.',
+            'Collaborated  with an <span>8-member team</span>, including an architect, backend engineers, a designer, a product manager, and a scrum master, aiming at the <span>commercial launch</span> of the application.',
+            'Employed <span>Agile methodologies</span>, managing tasks through a <span>strict Jira ticket system</span>.',
+        ],
+    },
+    {
         jobTitle: 'Full-stack Developer',
         title: 'ECommerce Web App.',
-        subtitle: 'YoungLeeHan Korean, U.S. | Jan. 2023 - present',
+        subtitle: 'YoungLeeHan Korean, U.S. | Jan. 2023 - Jan. 2024',
         image: youngLeeHanImg,
         description:
             'Developed a dynamic e-commerce website that offers K-culture blog and a platform for selling learning materials.',
@@ -209,32 +234,90 @@ export const experiencesCardData = [
             'Constructed <span>ERD</span> and adopted <span>Swagger documentation</span> to make communication efficient and clear.',
         ],
     },
+
     {
-        jobTitle: 'Frontend Engineer',
-        title: 'Web App.',
-        subtitle: 'HR Solutions | July 2023 - present',
-        image: hrSolutionImg,
-        description:
-            'An HR solution web application tailored for small businesses, enhancing PTO and part-time employee management.',
-        frontend: [
-            'TypeScript',
-            'React',
-            'Redux',
-            'HTML5',
-            'SASS',
-            'AJAX',
-            'REST API',
-            'Figma',
-        ],
+        jobTitle: 'Product Manager',
+        title: 'Product Management & Marketing',
+        subtitle: 'LG Hausys, Ltd., Seoul, South Korea | 2014 - 2018',
+        image: lgLogo,
         explanation: [
-            'Led front-end development of the project using <span>TypeScript, React, Redux, and BEM methodology</span>.',
-            'Developed common <span>UI component libraries</span> and integrated them into the service.',
-            'Collaborated  with an <span>8-member team</span>, including an architect, backend engineers, a designer, a product manager, and a scrum master, aiming at the <span>commercial launch</span> of the application.',
-            'Employed <span>Agile methodologies</span>, managing tasks through a <span>strict Jira ticket system</span>.',
+            'Demonstrated strategic product management, setting and executing bi-weekly <span>action plans</span>, and fostering smooth <span>collaboration across diverse teams</span>, including engineers, designers, and sales departments.',
+            '<span>Designed wireframes and developed marketing materials</span>, such as product websites, sample books, brochures, product application guides, and conference booths contributing to the successful launch of 2-3 new products annually, tailored for both global and local markets.',
+            '<span>Partnered with global sales teams on B2B product development</span>, ensuring that offerings were aligned with market demands and environmental standards.',
+            'Managed online product updates, sustainability reports, and corporate communications, ensuring brand consistency and market relevance.',
+        ],
+    },
+];
+
+export const projectsCardData = [
+    {
+        title: 'Hackerthon Submission',
+        subtitle: 'Black Wings Hacks 2024 | Feb. 2024',
+        image: padForwardImg,
+        description:
+            'Built a society-serving application using MERN stack within a 24-hour timeframe.',
+        link: [
+            {
+                icon: BsGithub,
+                to: 'https://github.com/sweetrain05/2024-hackerthon-Pad-Forward',
+                linkTitle: 'github',
+            },
+            {
+                icon: LuExternalLink,
+                to: 'https://pad-forward.vercel.app/',
+                linkTitle: 'demo',
+            },
+        ],
+        frontend: ['React', 'Vite', 'HTML5', 'SASS', 'AJAX', 'Figma'],
+        explanation: [
+            'Developed the front-end of an application within a <span>24-hour timeframe</span> using <span>React, SASS, and Vite</span>.',
+            'Provided <span>support to team members</span> unfamiliar with front-end, helping them understand React and SCSS.',
+            'Integrated <span>Google Maps API</span> and created common UI components.',
+            'Conducted code reviews and performed refactoring.',
         ],
     },
     {
-        jobTitle: 'Frontend Developer',
+        title: 'Portfolio Website',
+        subtitle: 'My portfolio | Nov. 2023',
+        image: portfolioImg,
+        description:
+            'Crafted a sophisticated online portfolio to exhibit my latest projects and skills.',
+        link: [
+            {
+                icon: BsGithub,
+                to: 'https://github.com/sweetrain05/portfolio',
+                linkTitle: 'github',
+            },
+            {
+                icon: CgFigma,
+                to: 'https://www.figma.com/file/AwbxfP9w0xFnRT4hELEQuv/Portfolio?node-id=0%3A1&mode=dev',
+                linkTitle: 'figma',
+            },
+            {
+                icon: LuExternalLink,
+                to: 'https://www.danbichoi.com/',
+                linkTitle: 'demo',
+            },
+        ],
+        frontend: [
+            'TypeScript',
+            'React',
+            'HTML5',
+            'SASS',
+            'AJAX',
+            'Figma',
+            'Responsive Design',
+            'Accessibility',
+            'Cypress',
+        ],
+        explanation: [
+            'Achieved high-performance benchmarks, with <span>scores exceeding 95 in Lighthouse</span> evaluations across performance, accessibility, best practices, and SEO.',
+            'Designed and engineered a mobile-responsive, four-page website using TypeScript and React emphasizing <span>accessibility</span> to ensure a seamless UX across various devices.',
+            'Applied end-to-end testing using <span>Cypress</span>.',
+            'Developed through <span>end-to-end lifecycle</span>, from Figma design to deployment, demonstrating a thorough understanding of the development process.',
+        ],
+    },
+    {
         title: 'Corporate Website',
         subtitle: 'Witness Creative Corp., U.S. | May - Jun. 2023',
         image: witnessPartnersImg,
@@ -277,68 +360,11 @@ export const experiencesCardData = [
         ],
     },
     {
-        jobTitle: 'Product Manager',
-        title: 'Product Management & Marketing',
-        subtitle: 'LG Hausys, Ltd., Seoul, South Korea | 2014 - 2018',
-        image: lgLogo,
-        explanation: [
-            'Demonstrated strategic product management, setting and executing bi-weekly <span>action plans</span>, and fostering smooth <span>collaboration across diverse teams</span>, including engineers, designers, and sales departments.',
-            '<span>Designed wireframes and developed marketing materials</span>, such as product websites, sample books, brochures, product application guides, and conference booths contributing to the successful launch of 2-3 new products annually, tailored for both global and local markets.',
-            '<span>Partnered with global sales teams on B2B product development</span>, ensuring that offerings were aligned with market demands and environmental standards.',
-            'Managed online product updates, sustainability reports, and corporate communications, ensuring brand consistency and market relevance.',
-        ],
-    },
-];
-
-export const projectsCardData = [
-    {
-        title: 'Portfolio Website',
-        subtitle: 'My portfolio | Nov. 2023',
-        image: portfolioImg,
-        description:
-            'Crafted a sophisticated online portfolio to exhibit my latest projects and skills, presenting a comprehensive overview of my professional capabilities.',
-        link: [
-            {
-                icon: BsGithub,
-                to: 'https://github.com/sweetrain05/portfolio',
-                linkTitle: 'github',
-            },
-            {
-                icon: CgFigma,
-                to: 'https://www.figma.com/file/AwbxfP9w0xFnRT4hELEQuv/Portfolio?node-id=0%3A1&mode=dev',
-                linkTitle: 'figma',
-            },
-            {
-                icon: LuExternalLink,
-                to: 'https://www.danbichoi.com/',
-                linkTitle: 'demo',
-            },
-        ],
-        frontend: [
-            'TypeScript',
-            'React',
-            'Hooks',
-            'HTML5',
-            'SASS',
-            'AJAX',
-            'Figma',
-            'Responsive Design',
-            'Accessibility',
-            'Cypress',
-        ],
-        explanation: [
-            'Achieved high-performance benchmarks, with <span>scores exceeding 95 in Lighthouse</span> evaluations across performance, accessibility, best practices, and SEO.',
-            'Designed and engineered a mobile-responsive, four-page website using TypeScript and React emphasizing <span>accessibility</span> to ensure a seamless UX across various devices.',
-            'Applied end-to-end testing using Cypress.',
-            'Developed through <span>end-to-end lifecycle</span>, from Figma design to deployment, demonstrating a thorough understanding of the development process.',
-        ],
-    },
-    {
         title: 'Web App.',
         subtitle: 'Weather and News by Zip Code | Oct. 2022',
         image: weatherAppImg,
         description:
-            'Built a site enabling users to search for local weather and related news articles by entering their zip code.',
+            'Built a web app enabling users to search for local weather and related news articles by entering their zip code.',
         link: [
             {
                 icon: BsGithub,
@@ -369,7 +395,7 @@ export const projectsCardData = [
         subtitle: 'Button Playground | Oct. 2022',
         image: buttonPlaygroundImg,
         description:
-            'Built a site enabling users to easily design a custom button and get code snippet instantly.',
+            'Built a web page enabling users to easily design a custom button and get code snippet instantly.',
         link: [
             {
                 icon: BsGithub,

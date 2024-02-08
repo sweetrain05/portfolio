@@ -9,7 +9,7 @@ const ResumeDownload: React.FC = () => {
             </p>
 
             <a
-                href='https://drive.google.com/file/d/1N_UHAfxmgYFTn2Z_VvSrzsPS7bjXnLpk/view?usp=sharing'
+                href='https://drive.google.com/file/d/1MCt_CxUZl6Pc2-lGnxh3FMFCcUhTcofW/view?usp=sharing'
                 target='_blank'
                 rel='noreferrer'
             >

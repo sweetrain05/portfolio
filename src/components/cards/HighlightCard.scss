@@ -15,6 +15,7 @@
         #ededed 0%,
         rgba(237, 237, 237, 0) 100%
     );
+    transition: all 0.8s ease-in-out;
 
     @include desktop {
         height: 510px;

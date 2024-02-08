@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('navigation', () => {
+describe('header navigation', () => {
     it('should navigate between pages', () => {
         cy.visit(Cypress.env('REACT_APP_URL'));
         cy.location('pathname').should('eq', '/');
