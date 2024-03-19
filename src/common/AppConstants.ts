@@ -236,15 +236,17 @@ export const experiencesCardData = [
     },
 
     {
-        jobTitle: 'Product Manager',
-        title: 'Product Management & Marketing',
-        subtitle: 'LG Hausys, Ltd., Seoul, South Korea | 2014 - 2018',
+        jobTitle: 'Marketing & Product Data Analyst',
+        title: 'Senior Marketing & Product Data Analyst',
+        subtitle:
+            'LX Hausys(Formerly LG Hausys), Seoul, South Korea | 2014 - 2018',
         image: lgLogo,
         explanation: [
-            'Demonstrated strategic product management, setting and executing bi-weekly <span>action plans</span>, and fostering smooth <span>collaboration across diverse teams</span>, including engineers, designers, and sales departments.',
-            '<span>Designed wireframes and developed marketing materials</span>, such as product websites, sample books, brochures, product application guides, and conference booths contributing to the successful launch of 2-3 new products annually, tailored for both global and local markets.',
-            '<span>Partnered with global sales teams on B2B product development</span>, ensuring that offerings were aligned with market demands and environmental standards.',
-            'Managed online product updates, sustainability reports, and corporate communications, ensuring brand consistency and market relevance.',
+            'Analyzed sales data with <span>SQL, Python, and Excel</span>, enabling data-driven decision-making on product specifications, features, color palettes, and pricing strategies for new and existing product lineups.',
+            'Directed cross-functional team collaborations, merging engineering and design insights with market analysis to pinpoint niche opportunities, driving the <span>on-time launch of 2-3 innovative products annually</span>.',
+            'Partnered with global sales teams on B2B product development, ensuring that offerings were aligned with market demands and environmental standards, leading to a <span>10% sales increase</span> in the Southeast Asian region.',
+            'Translated customer survey feedback into actionable insights for product feature enhancement.',
+            'Revolutionized marketing materials by standardizing design and transforming product features into iconic visuals for improved product visibility and brand recognition, enduringly <span>effective for over eight years</span>.',
         ],
     },
 ];

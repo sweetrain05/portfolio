@@ -8,11 +8,7 @@ const ResumeDownload: React.FC = () => {
                 My formal resume is available here.
             </p>
 
-            <a
-                href='https://drive.google.com/file/d/1MCt_CxUZl6Pc2-lGnxh3FMFCcUhTcofW/view?usp=sharing'
-                target='_blank'
-                rel='noreferrer'
-            >
+            <a href='#' target='_blank' rel='noreferrer'>
                 <div className='experiences__resume__btn'>
                     <span className='btn'>
                         <MdFileDownload className='experiences__resume__btn__icon' />

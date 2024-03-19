@@ -34,7 +34,7 @@ const Experiences: React.FC = () => {
         <section className='experiences'>
             <h1 className='experiences__title section-title'>Experiences</h1>
 
-            <ResumeDownload />
+            {/* <ResumeDownload /> */}
 
             <section>
                 {experiencesCardData.map((exp: experienceDataType) => (

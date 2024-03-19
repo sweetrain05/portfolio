@@ -30,7 +30,7 @@ const LandingView: React.FC = () => {
                                 <span>&</span>{' '}
                             </>
                         )}
-                        Front-end Developer
+                        {/* Front-end Developer
                         {windowWidth > mobileWidth ? (
                             <>
                                 {' '}
@@ -41,8 +41,8 @@ const LandingView: React.FC = () => {
                                 <br />
                                 <span>&</span>{' '}
                             </>
-                        )}
-                        Product Manager
+                        )} */}
+                        Marketing & Product Data Analyst
                     </h2>
                     <br />
                     Expertised in <span>
@@ -54,11 +54,11 @@ const LandingView: React.FC = () => {
                     accessible interfaces.
                     <br />
                     <br />
-                    With{' '}
-                    <span>5 years of experience as a Product Manager </span>
-                    and programming knowledge, I excel in bridging technical
-                    solutions with business strategies, focusing on optimal user
-                    experiences from initial concept to launch.
+                    With <span>5 years of experience </span>as a Marketing &
+                    Product Data Analyst and programming knowledge, I excel in
+                    bridging technical solutions with business strategies,
+                    focusing on optimal user experiences from initial concept to
+                    launch.
                 </div>
             </div>
 
