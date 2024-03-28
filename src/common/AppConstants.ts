@@ -236,15 +236,15 @@ export const experiencesCardData = [
     },
 
     {
-        jobTitle: 'Marketing & Product Data Analyst',
-        title: 'Senior Marketing & Product Data Analyst',
+        jobTitle: 'Product Marketing Manager',
+        title: 'Product Marketing Manager',
         subtitle:
-            'LX Hausys(Formerly LG Hausys), Seoul, South Korea | 2014 - 2018',
+            'LX Hausys(Formerly LG Hausys), Seoul, South Korea | Nov. 2013 - Oct. 2018',
         image: lgLogo,
         explanation: [
-            'Analyzed sales data with <span>SQL, Python, and Excel</span>, enabling data-driven decision-making on product specifications, features, color palettes, and pricing strategies for new and existing product lineups.',
             'Directed cross-functional team collaborations, merging engineering and design insights with market analysis to pinpoint niche opportunities, driving the <span>on-time launch of 2-3 innovative products annually</span>.',
-            'Partnered with global sales teams on B2B product development, ensuring that offerings were aligned with market demands and environmental standards, leading to a <span>10% sales increase</span> in the Southeast Asian region.',
+            'Partnered with global sales teams on B2B product development, ensuring that offerings were aligned with market demands and environmental standards, leading to a <span>20% sales increase</span> in the Southeast Asian region.',
+            'Analyzed sales data with <span>SQL, Python, and Excel</span>, enabling data-driven decision-making on product specifications, features, color palettes, and pricing strategies for new and existing product lineups.',
             'Translated customer survey feedback into actionable insights for product feature enhancement.',
             'Revolutionized marketing materials by standardizing design and transforming product features into iconic visuals for improved product visibility and brand recognition, enduringly <span>effective for over eight years</span>.',
         ],

@@ -42,7 +42,7 @@ const LandingView: React.FC = () => {
                                 <span>&</span>{' '}
                             </>
                         )} */}
-                        Marketing & Product Data Analyst
+                        Product Marketing Manager
                     </h2>
                     <br />
                     Expertised in <span>
@@ -54,8 +54,8 @@ const LandingView: React.FC = () => {
                     accessible interfaces.
                     <br />
                     <br />
-                    With <span>5 years of experience </span>as a Marketing &
-                    Product Data Analyst and programming knowledge, I excel in
+                    With <span>5 years of experience </span>as a Product
+                    Marketing Manager and programming knowledge, I excel in
                     bridging technical solutions with business strategies,
                     focusing on optimal user experiences from initial concept to
                     launch.
